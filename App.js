@@ -4,11 +4,11 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import MainPage from './src/views/MainPage';
-import Search from './src/views/Search';
-import Reels from './src/views/Reels';
-import Shopping from './src/views/Shopping';
-import Profile from './src/views/Profile';
+import MainPage from './src/views/MainPage/MainPage';
+import Search from './src/views/Search/Search';
+import Reels from './src/views/Reels/Reels';
+import Shopping from './src/views/Shopping/Shopping';
+import Profile from './src/views/Profile/Profile';
 import {colors} from './src/color';
 
 const Tab = createBottomTabNavigator();
@@ -47,27 +47,27 @@ export default function App() {
         <Tab.Screen
           name="Home"
           component={MainPage}
-          options={{tabBarLabel: ''}}
+          options={{tabBarLabel: '', headerShown: false}}
         />
         <Tab.Screen
           name="Search"
           component={Search}
-          options={{tabBarLabel: ''}}
+          options={{tabBarLabel: '', headerShown: false}}
         />
         <Tab.Screen
           name="Reels"
           component={Reels}
-          options={{tabBarLabel: ''}}
+          options={{tabBarLabel: '', headerShown: false}}
         />
         <Tab.Screen
           name="Shopping"
           component={Shopping}
-          options={{tabBarLabel: ''}}
+          options={{tabBarLabel: '', headerShown: false}}
         />
         <Tab.Screen
           name="Profile"
           component={Profile}
-          options={{tabBarLabel: ''}}
+          options={{tabBarLabel: '', headerShown: false}}
         />
       </Tab.Navigator>
     </NavigationContainer>
