@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image, TouchableOpacity} from 'react-native';
+import {View, Image, TouchableOpacity, Text} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import styles from './Story.styles';
 
@@ -11,6 +11,14 @@ export default function Story(props) {
   const image_size = props.isBorder
     ? props.container_size - props.container_size / 7.5
     : props.container_size;
+
+  const AddStory = () => {
+    return (
+      <View style={styles.addButton}>
+        <Text style={styles.addText}>+</Text>
+      </View>
+    );
+  };
 
   return (
     <View
@@ -39,13 +47,19 @@ export default function Story(props) {
           },
         ]}>
         <TouchableOpacity
+          activeOpacity={1}
+          onPress={() => null}
           style={[
             styles.buttonContainer,
-            {width: border, height: border, borderRadius: border / 2},
+            {
+              width: border,
+              height: border,
+              borderRadius: border / 2,
+            },
           ]}>
           <Image
             source={{
-              uri: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
+              uri: props.image,
             }}
             style={{
               width: image_size,
@@ -55,6 +69,7 @@ export default function Story(props) {
           />
         </TouchableOpacity>
       </LinearGradient>
+      {props.isStory && !props.isBorder ? <AddStory /> : null}
     </View>
   );
 }
