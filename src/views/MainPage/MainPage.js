@@ -9,6 +9,7 @@ import {
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import styles from './MainPage.styles';
+import {Story} from '../../components/Story';
 
 export default function MainPage() {
   return (
@@ -26,8 +27,7 @@ export default function MainPage() {
           <Icon name="mail-outline" size={30} style={styles.headerIcon} />
         </View>
       </View>
-
-      <FlatList />
+      <Story container_size={75} isBorder={true} />
     </View>
   );
 }

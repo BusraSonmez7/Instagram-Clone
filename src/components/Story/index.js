@@ -1,1 +1,1 @@
-export {default as Sharing} from './Story';
+export {default as Story} from './Story';
