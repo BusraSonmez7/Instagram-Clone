@@ -43,7 +43,7 @@ export default function MainPage() {
           <Icon name="expand-more" size={25} style={styles.headerTextIcon} />
         </TouchableWithoutFeedback> */}
       <View>
-        <ScrollView horizontal>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <Story
             container_size={75}
             isBorder={false}
@@ -56,6 +56,7 @@ export default function MainPage() {
             data={profile_image}
             renderItem={item => StoryList(item)}
             horizontal
+            keyExtractor={item => item.id}
           />
         </ScrollView>
       </View>
