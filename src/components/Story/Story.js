@@ -1,11 +1,32 @@
 import React from 'react';
-import {View, Image, TouchableOpacity} from 'react-native';
+import {View, Image, TouchableOpacity, Text} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import styles from './Reels.styles';
+import styles from './Story.styles';
 
-export default function Story() {
+export default function Story(props) {
+  const border = props.isBorder
+    ? props.container_size - props.container_size / 15
+    : props.container_size;
+
+  const image_size = props.isBorder
+    ? props.container_size - props.container_size / 7.5
+    : props.container_size;
+
+  const AddStory = () => {
+    return (
+      <View style={styles.addButton}>
+        <Text style={styles.addText}>+</Text>
+      </View>
+    );
+  };
+
   return (
-    <View style={[styles.container, {width: 100, height: 100}]}>
+    <View
+      style={[
+        styles.container,
+        {width: props.container_size, height: props.container_size},
+      ]}>
+      {console.log(border + 'dir.')}
       <LinearGradient
         colors={[
           '#bc99ec',
@@ -19,21 +40,36 @@ export default function Story() {
         end={{x: 1.0, y: 1.0}}
         style={[
           styles.borderGradient,
-          {width: 75, height: 75, borderRadius: 75 / 2},
+          {
+            width: props.container_size,
+            height: props.container_size,
+            borderRadius: props.container_size / 2,
+          },
         ]}>
         <TouchableOpacity
+          activeOpacity={1}
+          onPress={() => null}
           style={[
             styles.buttonContainer,
-            {width: 70, height: 70, borderRadius: 70 / 2},
+            {
+              width: border,
+              height: border,
+              borderRadius: border / 2,
+            },
           ]}>
           <Image
             source={{
-              uri: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
+              uri: props.image,
             }}
-            style={{width: 65, height: 65, borderRadius: 65 / 2}}
+            style={{
+              width: image_size,
+              height: image_size,
+              borderRadius: image_size / 2,
+            }}
           />
         </TouchableOpacity>
       </LinearGradient>
+      {props.isStory && !props.isBorder ? <AddStory /> : null}
     </View>
   );
 }
