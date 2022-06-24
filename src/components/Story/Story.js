@@ -12,10 +12,33 @@ export default function Story(props) {
     ? props.container_size - props.container_size / 7.5
     : props.container_size;
 
+  const add_button = !props.isBorder ? props.container_size / 3.75 : 0;
+
   const AddStory = () => {
     return (
-      <View style={styles.addButton}>
-        <Text style={styles.addText}>+</Text>
+      <View
+        style={[
+          styles.addButton,
+          {
+            width: add_button,
+            height: add_button,
+            borderRadius: add_button / 2,
+            left: props.container_size - add_button,
+            top: props.container_size - add_button,
+          },
+        ]}>
+        {console.log(add_button + 'dirrr')}
+        <Text
+          style={[
+            styles.addText,
+            {
+              width: add_button,
+              height: add_button,
+              borderRadius: add_button / 2,
+            },
+          ]}>
+          +
+        </Text>
       </View>
     );
   };
@@ -26,7 +49,6 @@ export default function Story(props) {
         styles.container,
         {width: props.container_size, height: props.container_size},
       ]}>
-      {console.log(border + 'dir.')}
       <LinearGradient
         colors={[
           '#bc99ec',

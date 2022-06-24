@@ -3,8 +3,8 @@ import {colors} from '../../color';
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: 'white',
+    flex: 1,
   },
   header: {
     flexDirection: 'row',
@@ -33,5 +33,8 @@ export default StyleSheet.create({
   headerIcon: {
     marginLeft: 10,
     color: colors.black,
+  },
+  story: {
+    height: 100,
   },
 });
