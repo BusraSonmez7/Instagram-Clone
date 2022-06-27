@@ -19,18 +19,10 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   addButton: {
-    width: 20,
-    height: 20,
-    borderRadius: 10,
     position: 'absolute',
-    left: 55,
-    top: 53,
   },
   addText: {
-    width: 20,
-    height: 20,
     textAlign: 'center',
-    borderRadius: 10,
     color: colors.white,
     backgroundColor: colors.add_story,
     borderColor: colors.white,

@@ -3,8 +3,8 @@ import {colors} from '../../color';
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: 'white',
+    flex: 1,
   },
   header: {
     flexDirection: 'row',
@@ -34,4 +34,27 @@ export default StyleSheet.create({
     marginLeft: 10,
     color: colors.black,
   },
+  story: {
+    height: 100,
+  },
+  instagramModalContainer: {
+    width: '50%',
+    height: '15%',
+    backgroundColor: colors.white,
+    justifyContent: 'space-evenly',
+    borderRadius: 5,
+    elevation: 5,
+    marginStart: 8,
+    marginTop: 63,
+  },
+  instagramModalView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 5,
+  },
+  instagramModalText: {
+    color: colors.black,
+    fontSize: 16,
+  },
+  instagramModalIcon: {},
 });
