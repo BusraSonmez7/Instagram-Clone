@@ -2,11 +2,14 @@ import {StyleSheet} from 'react-native';
 import {colors} from '../../color';
 
 export default StyleSheet.create({
-  container: {},
+  container: {
+    marginBottom: 30,
+  },
   headerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    marginStart: 10,
   },
   headerTitle: {
     flexDirection: 'row',

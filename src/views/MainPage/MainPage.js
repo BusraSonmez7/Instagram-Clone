@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
@@ -15,6 +15,8 @@ import profile_image from '../../data/profile_image';
 import Sharing from '../../components/Sharing/Sharing';
 
 export default function MainPage() {
+  const [modalVisible, setModalVisible] = useState(true);
+
   const FollowerStoryList = ({item}) => {
     console.log(item);
     return (
@@ -39,23 +41,42 @@ export default function MainPage() {
     return <Sharing />;
   };
 
-  const StoryList = () => {
+  const InstagramModalComponent = () => {
     return (
-      <FlatList
-        style={styles.story}
-        data={profile_image}
-        renderItem={item => FollowerStoryList(item)}
-        horizontal
-        ListHeaderComponent={MyStory}
-        showsHorizontalScrollIndicator={false}
-      />
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}>
+        {console.log('modal: ' + modalVisible)}
+        <View style={styles.instagramModalContainer}>
+          <TouchableWithoutFeedback
+            onPress={() => setModalVisible(!modalVisible)}>
+            <View style={styles.instagramModalView}>
+              <Text style={styles.instagramModalText}>Takip Edilenler</Text>
+              <Icon name="person" size={20} />
+            </View>
+          </TouchableWithoutFeedback>
+          <TouchableWithoutFeedback
+            onPress={() => setModalVisible(!modalVisible)}>
+            <View style={styles.instagramModalView}>
+              <Text style={styles.instagramModalText}>Favoriler</Text>
+              <Icon name="star" size={20} />
+            </View>
+          </TouchableWithoutFeedback>
+        </View>
+      </Modal>
     );
   };
 
-  return (
-    <View style={styles.container}>
+  const Header = () => {
+    return (
       <View style={styles.header}>
-        <TouchableWithoutFeedback onPress={() => null}>
+        {console.log('view: ' + modalVisible)}
+        <TouchableWithoutFeedback
+          onPress={() => setModalVisible(!modalVisible)}>
           <View style={styles.headerTitle}>
             <Text style={styles.headerText}>Instagram</Text>
             <Icon name="expand-more" size={25} style={styles.headerTextIcon} />
@@ -67,6 +88,12 @@ export default function MainPage() {
           <Icon name="mail-outline" size={30} style={styles.headerIcon} />
         </View>
       </View>
+    );
+  };
+
+  return (
+    <View style={styles.container}>
+      {Header()}
 
       <ScrollView>
         <FlatList

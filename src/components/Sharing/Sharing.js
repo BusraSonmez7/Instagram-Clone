@@ -18,13 +18,13 @@ const image_url =
 
 export default function Sharing() {
   return (
-    <View>
+    <View style={styles.container}>
       <View style={styles.headerContainer}>
         <View style={styles.headerTitle}>
           <Story
             container_size={35}
             isBorder={false}
-            isStory={true}
+            isStory={false}
             image={
               'https://us.123rf.com/450wm/vadymvdrobot/vadymvdrobot1803/vadymvdrobot180303570/97983244-happy-asian-woman-in-t-shirt-bites-eyeglasses-and-looking-at-the-camera-over-grey-background.jpg?ver=6'
             }
