@@ -28,4 +28,5 @@ export default StyleSheet.create({
     marginRight: 10,
     marginTop: 10,
   },
+  flatListStyle: {},
 });
