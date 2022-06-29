@@ -1,19 +1,31 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import {colors} from '../../color';
+
+const WIDTH = Dimensions.get('window').width;
+const HEIGHT = Dimensions.get('window').height;
 
 export default StyleSheet.create({
   container: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    flex: 1,
+    backgroundColor: 'red',
   },
-  buttonContainer: {
-    backgroundColor: 'white',
-    justifyContent: 'center',
-    alignItems: 'center',
+  topContainer: {
+    width: WIDTH,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    position: 'absolute',
+    zIndex: 1,
   },
-  image: {},
-  borderGradient: {
-    justifyContent: 'center',
-    alignItems: 'center',
+  reelsText: {
+    color: colors.white,
+    fontSize: 25,
+    fontWeight: 'bold',
+    marginStart: 10,
+    marginTop: 10,
+  },
+  cameraIcon: {
+    color: colors.white,
+    marginRight: 10,
+    marginTop: 10,
   },
 });
