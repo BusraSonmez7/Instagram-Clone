@@ -30,15 +30,17 @@ export default function Reels() {
     <View style={styles.container}>
       <View style={styles.topContainer}>
         <Text style={styles.reelsText}>Reels</Text>
-        <Icon name={'photo-camera'} size={25} style={styles.cameraIcon} />
+        <Icon name={'photo-camera'} size={30} style={styles.cameraIcon} />
       </View>
+
       <SwiperFlatList
         data={videoList}
-        renderItem={() => <ReelsComponent />}
+        renderItem={({item, index}) => (
+          <ReelsComponent currentIndex={currentIndex} index={index} />
+        )}
         onChangeIndex={indexValue}
         keyExtractor={(item, index) => index}
         vertical={true}
-        style={styles.flatListStyle}
       />
     </View>
   );
