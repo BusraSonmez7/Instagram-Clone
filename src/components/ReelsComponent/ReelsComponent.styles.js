@@ -21,12 +21,14 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     position: 'absolute',
-    bottom: 20,
+    bottom: 10,
     right: 0,
     left: 0,
   },
   textContainer: {
     justifyContent: 'flex-end',
+    marginRight: 40,
+    left: 0,
   },
   profileContainer: {
     flexDirection: 'row',
@@ -51,22 +53,21 @@ export default StyleSheet.create({
   },
   comment: {
     color: colors.white,
-    marginLeft: 15,
+    marginLeft: 10,
     marginTop: 10,
+    fontSize: 14,
   },
   soundContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 5,
   },
   soundAnimation: {
-    height: 30,
-    width: 30,
-    marginLeft: 5,
+    height: 50,
+    width: 50,
   },
   musicName: {
     color: colors.white,
-    marginLeft: 15,
+    marginLeft: 10,
   },
   soundCircle: {
     color: colors.white,
@@ -77,15 +78,18 @@ export default StyleSheet.create({
     marginLeft: 10,
   },
   iconContainer: {
+    height: HEIGHT / 2,
     alignItems: 'center',
+    right: 20,
+    justifyContent: 'space-evenly',
   },
   icon: {
     color: colors.white,
     marginTop: 15,
   },
   image: {
-    width: 30,
-    height: 30,
+    width: WIDTH / 8,
+    height: WIDTH / 8,
     borderColor: colors.white,
     borderRadius: 5,
     borderWidth: 3,
@@ -96,13 +100,7 @@ export default StyleSheet.create({
     fontSize: 12,
   },
   volume: {
-    width: 80,
-    height: 80,
     top: HEIGHT / 2.4,
     left: WIDTH / 2.4,
-    borderWidth: 1,
-    borderRadius: 40,
-    padding: 10,
-    backgroundColor: 'white',
   },
 });
