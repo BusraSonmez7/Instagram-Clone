@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image} from 'react-native';
+import {View, Image, TouchableOpacity} from 'react-native';
 import SearchData from '../../data/search_data';
 import styles from './SearchComponent.styles';
 export default function SearchComponent() {
@@ -13,19 +13,19 @@ export default function SearchComponent() {
                 <View style={styles.list}>
                   {data.images.slice(0, 4).map((img, imgIndex) => {
                     return (
-                      <View>
+                      <TouchableOpacity activeOpacity={0.9}>
                         {console.log(img)}
                         <Image source={img} style={styles.image} />
-                      </View>
+                      </TouchableOpacity>
                     );
                   })}
                 </View>
                 <View>
                   {data.images.slice(5, 6).map((img, imgIndex) => {
                     return (
-                      <View>
+                      <TouchableOpacity activeOpacity={0.9}>
                         <Image source={img} style={styles.image_two} />
-                      </View>
+                      </TouchableOpacity>
                     );
                   })}
                 </View>
@@ -36,10 +36,10 @@ export default function SearchComponent() {
                 {console.log(data.images)}
                 {data.images.slice(0, 6).map((img, imgIndex) => {
                   return (
-                    <View>
+                    <TouchableOpacity activeOpacity={0.9}>
                       {console.log(img)}
                       <Image source={img} style={styles.image} />
-                    </View>
+                    </TouchableOpacity>
                   );
                 })}
               </View>
@@ -48,18 +48,18 @@ export default function SearchComponent() {
               <View style={styles.list_left}>
                 {data.images.slice(4, 5).map((img, imgIndex) => {
                   return (
-                    <View>
+                    <TouchableOpacity activeOpacity={0.9}>
                       <Image source={img} style={styles.image_two} />
-                    </View>
+                    </TouchableOpacity>
                   );
                 })}
                 <View style={styles.list}>
                   {data.images.slice(0, 4).map((img, imgIndex) => {
                     return (
-                      <View>
+                      <TouchableOpacity activeOpacity={0.9}>
                         {console.log(img)}
                         <Image source={img} style={styles.image} />
-                      </View>
+                      </TouchableOpacity>
                     );
                   })}
                 </View>
@@ -70,10 +70,10 @@ export default function SearchComponent() {
                 {console.log(data.images)}
                 {data.images.slice(0, 6).map((img, imgIndex) => {
                   return (
-                    <View>
+                    <TouchableOpacity activeOpacity={0.9}>
                       {console.log(img)}
                       <Image source={img} style={styles.image} />
-                    </View>
+                    </TouchableOpacity>
                   );
                 })}
               </View>
