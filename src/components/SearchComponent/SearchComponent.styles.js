@@ -8,6 +8,7 @@ export default StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
+    marginEnd: 10,
   },
   list: {
     width: ((WIDTH - 8) / 3) * 2,

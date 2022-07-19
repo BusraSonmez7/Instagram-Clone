@@ -9,7 +9,7 @@ export default function Search() {
   const [searchText, setSearchText] = useState('Useless Text');
   return (
     <View style={styles.container}>
-      <ScrollView>
+      <ScrollView nestedScrollEnabled={true}>
         <View style={styles.searchContainer}>
           <Icon name={'search'} size={20} />
           <TextInput onChangeText={setSearchText} placeholder="Ara" />
