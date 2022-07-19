@@ -95,7 +95,7 @@ export default function MainPage() {
     <View style={styles.container}>
       {Header()}
 
-      <ScrollView>
+      <ScrollView nestedScrollEnabled={true}>
         <FlatList
           style={styles.story}
           data={profile_image}
@@ -108,6 +108,8 @@ export default function MainPage() {
           data={profile_image}
           renderItem={item => SharingList()}
           showsHorizontalScrollIndicator={false}
+          horizontal={false}
+          style={{height: '100%', width: '100%'}}
         />
       </ScrollView>
     </View>
