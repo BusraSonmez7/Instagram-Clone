@@ -185,6 +185,6 @@ export default StyleSheet.create({
   },
   topNavigatorContainer: {
     width: WIDTH,
-    height: HEIGHT - 80,
+    height: HEIGHT - 120,
   },
 });

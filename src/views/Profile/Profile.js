@@ -14,6 +14,7 @@ import Story from '../../components/Story/Story';
 import NewPersonComponent from '../../components/NewPersonComponent/NewPersonComponent';
 import ProfileImage from '../../data/profile_image';
 import TopBarNavigator from '../../Navigators/MeterialTopTabs';
+import Shares from '../../components/ProfilePost/ProfilePost';
 
 export default function Profile() {
   const HEIGHT = Dimensions.get('window').height;

@@ -1,17 +1,20 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import Search from '../views/Search/Search';
-import MainPage from '../views/MainPage/MainPage';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {colors} from '../color';
+
+import Reels from '../views/Profile/Reels/Reels';
+import Sharing from '../views/Profile/Sharing/Sharing';
+import Tags from '../views/Profile/Tags/Tags';
+import Videos from '../views/Profile/Videos/Videos';
 
 const Tab = createMaterialTopTabNavigator();
 
 function MyTabs() {
   return (
     <Tab.Navigator
-      initialRouteName="Search"
+      initialRouteName="Sharing"
       tabBarOptions={{
         labelStyle: {fontSize: 12},
         style: {backgroundColor: colors.white},
@@ -21,35 +24,35 @@ function MyTabs() {
           let iconName;
 
           switch (route.name) {
-            case 'MainPage':
-              iconName = 'home';
+            case 'Sharing':
+              iconName = 'grid-on';
               break;
-            case 'Search':
-              iconName = 'person';
+            case 'Reels':
+              iconName = 'video-library';
+              break;
+            case 'Videos':
+              iconName = 'play-arrow';
+              break;
+            case 'Tags':
+              iconName = 'portrait';
               break;
           }
 
-          return <Icon name={iconName} size={20} color={color} />;
+          return <Icon name={iconName} size={25} color={color} />;
         },
         tabBarIndicatorStyle: {
           backgroundColor: colors.black,
           height: 1.5,
         },
-        tabBarPressColor: 'white',
-        tabBarActiveTintColor: 'black',
-        tabBarInactiveTintColor: 'gray',
+        tabBarPressColor: colors.white,
+        tabBarActiveTintColor: colors.black,
+        tabBarInactiveTintColor: colors.inactiveColor,
         tabBarShowLabel: false,
       })}>
-      <Tab.Screen name="Search" component={Search} />
-      <Tab.Screen
-        name="MainPage"
-        component={MainPage}
-        options={{
-          tabBarOptions: {
-            style: {backgroundColor: 'yellow', height: 100},
-          },
-        }}
-      />
+      <Tab.Screen name="Sharing" component={Sharing} />
+      <Tab.Screen name="Reels" component={Reels} />
+      <Tab.Screen name="Videos" component={Videos} />
+      <Tab.Screen name="Tags" component={Tags} />
     </Tab.Navigator>
   );
 }

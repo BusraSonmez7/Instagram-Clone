@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, Image, Dimensions} from 'react-native';
-import styles from './ReelsComponent.styles';
+import styles from './ReelsPage.styles';
 import Video from 'react-native-video';
 import {Story} from '../Story';
 import LottieView from 'lottie-react-native';
@@ -11,7 +11,7 @@ const HEIGHT = Dimensions.get('window').height;
 const image_url =
   'https://us.123rf.com/450wm/vadymvdrobot/vadymvdrobot1803/vadymvdrobot180303570/97983244-happy-asian-woman-in-t-shirt-bites-eyeglasses-and-looking-at-the-camera-over-grey-background.jpg?ver=6';
 
-export default function ReelsComponent({currentIndex, index}) {
+export default function ReelsPage({currentIndex, index}) {
   const [mute, setMute] = useState(true);
 
   const onError = error => {
