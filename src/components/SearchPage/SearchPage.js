@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, Image, TouchableOpacity} from 'react-native';
 import SearchData from '../../data/search_data';
-import styles from './SearchComponent.styles';
-export default function SearchComponent() {
+import styles from './SearchPage.styles';
+export default function SearchPage() {
   return (
     <View>
       {SearchData.map((data, index) => {

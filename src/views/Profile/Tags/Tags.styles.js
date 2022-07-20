@@ -31,16 +31,15 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     color: colors.black,
     marginTop: 10,
+    marginEnd: 100,
+    marginStart: 100,
+    textAlign: 'center',
   },
   textComment: {
     marginTop: 10,
     textAlign: 'center',
-    marginEnd: 50,
-    marginStart: 50,
+    marginEnd: 70,
+    marginStart: 70,
     marginBottom: 10,
-  },
-  textNoListButton: {
-    color: colors.blue,
-    fontWeight: 'bold',
   },
 });
