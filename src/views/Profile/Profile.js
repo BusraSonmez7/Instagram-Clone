@@ -13,8 +13,9 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Story from '../../components/Story/Story';
 import NewPersonComponent from '../../components/NewPersonComponent/NewPersonComponent';
 import ProfileImage from '../../data/profile_image';
-import TopBarNavigator from '../../Navigators/MeterialTopTabs';
-import Shares from '../../components/ProfilePost/ProfilePost';
+import TopBarNavigator from '../../Navigators/ProfileMeterialTopTabs';
+
+import UserNameHeader from '../../components/UserNameDropDown/UserNameDropDown';
 
 export default function Profile() {
   const HEIGHT = Dimensions.get('window').height;
@@ -28,9 +29,7 @@ export default function Profile() {
       <View style={styles.headerContainer}>
         <View style={styles.userNameContainer}>
           <Icon name="lock-outline" size={16} style={styles.iconLock} />
-          <Text style={styles.userNameTitle}>kullanici_adi</Text>
-          <Icon name="chevron-down" size={20} style={styles.iconArrowDown} />
-          <Icon name="circle-medium" size={20} style={styles.iconCircle} />
+          <UserNameHeader />
         </View>
         <View style={styles.headerRightContainer}>
           <Icon
@@ -52,6 +51,7 @@ export default function Profile() {
           isBorder={false}
           isStory={false}
           image={profileImg}
+          watch={false}
         />
         {profileContent('XX', 'Gönderi')}
         {profileContent('XXX', 'Takipçi')}
@@ -116,7 +116,7 @@ export default function Profile() {
         <FlatList
           horizontal
           data={ProfileImage}
-          renderItem={item => <NewPersonComponent image={item.item} />}
+          renderItem={item => <NewPersonComponent image={item.item.image} />}
           showsHorizontalScrollIndicator={false}
           style={{marginStart: 10}}
         />

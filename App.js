@@ -4,7 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import MainPage from './src/views/MainPage/MainPage';
+import MainPage from './src/views/MainPage/MainPageRouter';
 import Search from './src/views/Search/Search';
 import Reels from './src/views/Reels/Reels';
 import Shopping from './src/views/Shopping/Shopping';
