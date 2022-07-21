@@ -1,10 +1,13 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import {colors} from '../../color';
+const WIDTH = Dimensions.get('window').width;
+const HEIGHT = Dimensions.get('window').height;
 
 export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
+    marginBottom: 150,
   },
   headerContainer: {
     flexDirection: 'row',
@@ -37,5 +40,15 @@ export default StyleSheet.create({
   categoryButtonText: {
     color: colors.black,
     fontWeight: 'bold',
+  },
+  productListContainer: {
+    marginTop: 10,
+  },
+  productImage: {
+    width: WIDTH / 2 - 1,
+    height: WIDTH / 2 - 1,
+    marginEnd: 2,
+    marginBottom: 2,
+    resizeMode: 'cover',
   },
 });

@@ -10,9 +10,9 @@ import {
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import styles from './MainPage.styles';
-import {Story} from '../../components/Story';
-import profile_image from '../../data/profile_image';
-import Sharing from '../../components/Sharing/Sharing';
+import {Story} from '../../../components/Story';
+import profile_image from '../../../data/profile_image';
+import Sharing from '../../../components/Sharing/Sharing';
 
 export default function MainPage() {
   const [modalVisible, setModalVisible] = useState(true);
@@ -20,7 +20,13 @@ export default function MainPage() {
   const FollowerStoryList = ({item}) => {
     console.log(item);
     return (
-      <Story container_size={75} isBorder={true} isStory={true} image={item} />
+      <Story
+        container_size={75}
+        isBorder={true}
+        isStory={true}
+        image={item.image}
+        watch={item.watch}
+      />
     );
   };
 
@@ -33,6 +39,7 @@ export default function MainPage() {
         image={
           'https://us.123rf.com/450wm/vadymvdrobot/vadymvdrobot1803/vadymvdrobot180303570/97983244-happy-asian-woman-in-t-shirt-bites-eyeglasses-and-looking-at-the-camera-over-grey-background.jpg?ver=6'
         }
+        watch={false}
       />
     );
   };

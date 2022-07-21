@@ -12,6 +12,9 @@ export default function Story(props) {
     ? props.container_size - props.container_size / 7.5
     : props.container_size;
 
+  const color = props.watch
+    ? ['#bc99ec', '#f10b6b', '#f15d0e', '#ef09a8', '#d509d3', '#f2ad08']
+    : ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0'];
   const add_button = !props.isBorder ? props.container_size / 3.75 : 0;
 
   const AddStory = () => {
@@ -50,14 +53,7 @@ export default function Story(props) {
         {width: props.container_size, height: props.container_size},
       ]}>
       <LinearGradient
-        colors={[
-          '#bc99ec',
-          '#f10b6b',
-          '#f15d0e',
-          '#ef09a8',
-          '#d509d3',
-          '#f2ad08',
-        ]}
+        colors={color}
         start={{x: 0.0, y: 1.0}}
         end={{x: 1.0, y: 1.0}}
         style={[

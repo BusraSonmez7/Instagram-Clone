@@ -1,9 +1,17 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, ScrollView} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+  FlatList,
+  Image,
+} from 'react-native';
 import styles from './Shopping.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import SearchView from '../../components/Search/Search';
 import ShopCategory from '../../data/shop_category_list';
+import ImageList from '../../data/product_image';
 
 export default function Shopping() {
   const header = () => {
@@ -44,11 +52,28 @@ export default function Shopping() {
     );
   };
 
+  const productList = () => {
+    return (
+      <View style={styles.productListContainer}>
+        <FlatList
+          data={ImageList}
+          renderItem={item => (
+            <Image source={{uri: item.item}} style={styles.productImage} />
+          )}
+          keyExtractor={(data, index) => data + '' + index}
+          numColumns={2}
+          showsVerticalScrollIndicator={false}
+        />
+      </View>
+    );
+  };
+
   return (
     <View style={styles.container}>
       {header()}
       {search()}
       {categoryButton()}
+      {productList()}
     </View>
   );
 }
