@@ -7,20 +7,27 @@ import {
   FlatList,
   Image,
 } from 'react-native';
+
+import {MenuProvider, renderers} from 'react-native-popup-menu';
 import styles from './Shopping.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import SearchView from '../../components/Search/Search';
 import ShopCategory from '../../data/shop_category_list';
 import ImageList from '../../data/product_image';
+import ShoppingMenu from '../../menu/ShoppingMenu/ShoppingMenu';
 
 export default function Shopping() {
+  const menuProviderStyles = {
+    backdrop: styles.backdrop,
+  };
+
   const header = () => {
     return (
       <View style={styles.headerContainer}>
         <Text style={styles.headerText}>Shop</Text>
         <View style={styles.headerIconContainer}>
           <Icon name={'bookmark-border'} size={30} style={styles.headerIcon} />
-          <Icon name={'menu'} size={30} style={styles.headerIcon} />
+          <ShoppingMenu />
         </View>
       </View>
     );
@@ -69,11 +76,13 @@ export default function Shopping() {
   };
 
   return (
-    <View style={styles.container}>
-      {header()}
-      {search()}
-      {categoryButton()}
-      {productList()}
-    </View>
+    <MenuProvider customStyles={menuProviderStyles}>
+      <View style={styles.container}>
+        {header()}
+        {search()}
+        {categoryButton()}
+        {productList()}
+      </View>
+    </MenuProvider>
   );
 }

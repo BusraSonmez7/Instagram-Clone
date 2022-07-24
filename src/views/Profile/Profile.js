@@ -6,9 +6,11 @@ import {
   TouchableOpacity,
   FlatList,
   Dimensions,
+  StyleSheet,
 } from 'react-native';
 import styles from './Profile.styles';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {MenuProvider, renderers} from 'react-native-popup-menu';
 
 import Story from '../../components/Story/Story';
 import NewPersonComponent from '../../components/NewPersonComponent/NewPersonComponent';
@@ -16,8 +18,15 @@ import ProfileImage from '../../data/profile_image';
 import TopBarNavigator from '../../Navigators/ProfileMeterialTopTabs';
 
 import UserNameHeader from '../../components/UserNameDropDown/UserNameDropDown';
+import ProfileAdd from '../../menu/ProfileAdd/ProfileAdd';
+import {colors} from '../../color';
+import ProfileMenu from '../../menu/ProfileMenu/ProfileMenu';
 
 export default function Profile() {
+  const menuProviderStyles = {
+    backdrop: styles.backdrop,
+  };
+
   const HEIGHT = Dimensions.get('window').height;
   const profileImg =
     'https://us.123rf.com/450wm/vadymvdrobot/vadymvdrobot1803/vadymvdrobot180303570/97983244-happy-asian-woman-in-t-shirt-bites-eyeglasses-and-looking-at-the-camera-over-grey-background.jpg?ver=6';
@@ -32,12 +41,8 @@ export default function Profile() {
           <UserNameHeader />
         </View>
         <View style={styles.headerRightContainer}>
-          <Icon
-            name="plus-circle-outline"
-            size={30}
-            style={styles.iconRightHeader}
-          />
-          <Icon name="menu" size={30} style={styles.iconRightHeader} />
+          <ProfileAdd />
+          <ProfileMenu />
         </View>
       </View>
     );
@@ -160,22 +165,24 @@ export default function Profile() {
   };
 
   return (
-    <View style={styles.container}>
-      {header()}
+    <MenuProvider customStyles={menuProviderStyles}>
+      <View style={styles.container}>
+        {header()}
 
-      <ScrollView
-        nestedScrollEnabled={true}
-        showsVerticalScrollIndicator={false}>
-        <View style={{Height: 'auto'}}>
-          {profileImage()}
-          {profilDetail()}
-          {newPerson()}
-          {favoriteStory()}
-          <View style={styles.topNavigatorContainer}>
-            <TopBarNavigator />
+        <ScrollView
+          nestedScrollEnabled={true}
+          showsVerticalScrollIndicator={false}>
+          <View style={{Height: 'auto'}}>
+            {profileImage()}
+            {profilDetail()}
+            {newPerson()}
+            {favoriteStory()}
+            <View style={styles.topNavigatorContainer}>
+              <TopBarNavigator />
+            </View>
           </View>
-        </View>
-      </ScrollView>
-    </View>
+        </ScrollView>
+      </View>
+    </MenuProvider>
   );
 }

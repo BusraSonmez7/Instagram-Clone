@@ -80,7 +80,7 @@ export default StyleSheet.create({
   iconContainer: {
     height: HEIGHT / 2,
     alignItems: 'center',
-    right: 20,
+    right: 10,
     justifyContent: 'space-evenly',
   },
   icon: {
@@ -102,5 +102,9 @@ export default StyleSheet.create({
   volume: {
     top: HEIGHT / 2.4,
     left: WIDTH / 2.4,
+  },
+  backdrop: {
+    backgroundColor: colors.black,
+    opacity: 0.5,
   },
 });
