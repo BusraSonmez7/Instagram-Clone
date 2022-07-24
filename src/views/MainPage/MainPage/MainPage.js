@@ -2,20 +2,24 @@ import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
-  Modal,
+  Image,
   TouchableWithoutFeedback,
   FlatList,
   ScrollView,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {MenuProvider, renderers} from 'react-native-popup-menu';
 
 import styles from './MainPage.styles';
 import {Story} from '../../../components/Story';
 import profile_image from '../../../data/profile_image';
 import Sharing from '../../../components/Sharing/Sharing';
+import Instagram from '../../../menu/Instagram/Instagram';
+import AddMenu from '../../../menu/MainPageAdd/MainPageAdd';
+import CircleComponent from '../../../components/CircleComponent/CircleComponent';
 
 export default function MainPage() {
-  const [modalVisible, setModalVisible] = useState(true);
+  const [logo, setLogo] = useState(false);
 
   const FollowerStoryList = ({item}) => {
     console.log(item);
@@ -48,49 +52,12 @@ export default function MainPage() {
     return <Sharing />;
   };
 
-  const InstagramModalComponent = () => {
-    return (
-      <Modal
-        animationType="fade"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          setModalVisible(!modalVisible);
-        }}>
-        {console.log('modal: ' + modalVisible)}
-        <View style={styles.instagramModalContainer}>
-          <TouchableWithoutFeedback
-            onPress={() => setModalVisible(!modalVisible)}>
-            <View style={styles.instagramModalView}>
-              <Text style={styles.instagramModalText}>Takip Edilenler</Text>
-              <Icon name="person" size={20} />
-            </View>
-          </TouchableWithoutFeedback>
-          <TouchableWithoutFeedback
-            onPress={() => setModalVisible(!modalVisible)}>
-            <View style={styles.instagramModalView}>
-              <Text style={styles.instagramModalText}>Favoriler</Text>
-              <Icon name="star" size={20} />
-            </View>
-          </TouchableWithoutFeedback>
-        </View>
-      </Modal>
-    );
-  };
-
   const Header = () => {
     return (
       <View style={styles.header}>
-        {console.log('view: ' + modalVisible)}
-        <TouchableWithoutFeedback
-          onPress={() => setModalVisible(!modalVisible)}>
-          <View style={styles.headerTitle}>
-            <Text style={styles.headerText}>Instagram</Text>
-            <Icon name="expand-more" size={25} style={styles.headerTextIcon} />
-          </View>
-        </TouchableWithoutFeedback>
+        <Instagram />
         <View style={styles.headerIcons}>
-          <Icon name="add-circle-outline" size={30} style={styles.headerIcon} />
+          <AddMenu />
           <Icon name="favorite-border" size={30} style={styles.headerIcon} />
           <Icon name="mail-outline" size={30} style={styles.headerIcon} />
         </View>
@@ -99,26 +66,27 @@ export default function MainPage() {
   };
 
   return (
-    <View style={styles.container}>
-      {Header()}
-
-      <ScrollView nestedScrollEnabled={true}>
-        <FlatList
-          style={styles.story}
-          data={profile_image}
-          renderItem={item => FollowerStoryList(item)}
-          horizontal
-          ListHeaderComponent={MyStory}
-          showsHorizontalScrollIndicator={false}
-        />
-        <FlatList
-          data={profile_image}
-          renderItem={item => SharingList()}
-          showsHorizontalScrollIndicator={false}
-          horizontal={false}
-          style={{height: '100%', width: '100%'}}
-        />
-      </ScrollView>
-    </View>
+    <MenuProvider>
+      <View style={styles.container}>
+        {Header()}
+        <ScrollView nestedScrollEnabled={true}>
+          <FlatList
+            style={styles.story}
+            data={profile_image}
+            renderItem={item => FollowerStoryList(item)}
+            horizontal
+            ListHeaderComponent={MyStory}
+            showsHorizontalScrollIndicator={false}
+          />
+          <FlatList
+            data={profile_image}
+            renderItem={item => SharingList()}
+            showsHorizontalScrollIndicator={false}
+            horizontal={false}
+            style={{height: '100%', width: '100%'}}
+          />
+        </ScrollView>
+      </View>
+    </MenuProvider>
   );
 }

@@ -51,4 +51,8 @@ export default StyleSheet.create({
     marginBottom: 2,
     resizeMode: 'cover',
   },
+  backdrop: {
+    backgroundColor: colors.black,
+    opacity: 0.5,
+  },
 });

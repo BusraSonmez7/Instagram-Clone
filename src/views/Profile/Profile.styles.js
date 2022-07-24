@@ -187,4 +187,8 @@ export default StyleSheet.create({
     width: WIDTH,
     height: HEIGHT - 120,
   },
+  backdrop: {
+    backgroundColor: colors.black,
+    opacity: 0.5,
+  },
 });

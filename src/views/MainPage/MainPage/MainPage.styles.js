@@ -18,13 +18,10 @@ export default StyleSheet.create({
   },
   headerTitle: {
     flexDirection: 'row',
-    alignItems: 'flex-end',
-  },
-  headerText: {
-    fontSize: 30,
-    fontFamily: 'DancingScript-Bold',
+    alignItems: 'center',
     color: colors.black,
   },
+
   headerTextIcon: {
     marginLeft: 10,
     color: colors.black,
