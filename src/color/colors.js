@@ -10,6 +10,8 @@ const colors = {
   blue: '#126FE8',
   circle_border: '#BFBFBF',
   red: '#D60021',
+  gray: '#7F7F7F',
+  text_gray: '#B8B8B8',
 };
 
 export default colors;

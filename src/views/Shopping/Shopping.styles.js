@@ -7,7 +7,7 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.white,
-    marginBottom: 150,
+    marginBottom: 100,
   },
   headerContainer: {
     flexDirection: 'row',

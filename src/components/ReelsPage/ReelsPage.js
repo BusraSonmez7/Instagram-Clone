@@ -8,6 +8,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import ReelsMenu from '../../menu/ReelsMenu/ReelsMenu';
 import {MenuProvider, renderers} from 'react-native-popup-menu';
+import Messages from '../../menu/Messages/Messages';
 
 const HEIGHT = Dimensions.get('window').height;
 
@@ -78,7 +79,7 @@ export default function ReelsPage({currentIndex, index}) {
               style={styles.icon}
             />
             <Text style={styles.iconText}>XXX</Text>
-            <Icon name="send" size={HEIGHT / 30} style={styles.icon} />
+            <Messages />
             <ReelsMenu />
             <Image
               source={{

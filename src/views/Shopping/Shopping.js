@@ -34,7 +34,7 @@ export default function Shopping() {
   };
 
   const search = () => {
-    return <SearchView placeHolder={'Search shops'} />;
+    return <SearchView placeHolder={'Search shops'} endIcon={false} />;
   };
 
   const categoryButton = () => {

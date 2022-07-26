@@ -35,7 +35,16 @@ export default StyleSheet.create({
     color: colors.black,
   },
   bottomText: {
+    flex: 1,
     marginStart: 10,
     fontSize: 16,
+    marginEnd: 10,
+    color: colors.black,
+  },
+  bottomContainer: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    marginTop: 10,
+    marginBottom: 10,
   },
 });

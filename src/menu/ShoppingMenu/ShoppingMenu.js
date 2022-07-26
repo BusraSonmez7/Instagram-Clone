@@ -8,7 +8,6 @@ import {colors} from '../../color';
 import {MenuProvider, renderers} from 'react-native-popup-menu';
 
 import MenuItemIconText from '../../components/MenuItemIconText/MenuItemIconText';
-import MenuList from '../../data/menuList';
 
 import {
   Menu,
@@ -25,7 +24,12 @@ export default function ShoppingMenu() {
   const menuItem = (title, icon, color) => {
     return (
       <MenuOption style={styles.item}>
-        <MenuItemIconText title={title} icon={icon} color={color} />
+        <MenuItemIconText
+          title={title}
+          icon={icon}
+          color={color}
+          isBorder={false}
+        />
       </MenuOption>
     );
   };
@@ -33,21 +37,25 @@ export default function ShoppingMenu() {
     <View style={styles.container}>
       <Menu renderer={renderers.SlideInMenu}>
         <MenuTrigger>
-          <Icon name={'menu'} size={30} style={styles.headerIcon} />
+          <Icon2 name="menu" size={30} style={styles.icon} />
         </MenuTrigger>
         <MenuOptions optionsContainerStyle={styles.menuContainer}>
-          {menuItem('Settings', 'settings', colors.black)}
-          {menuItem('Archive', 'history', colors.black)}
-          {menuItem('Your activity', 'history-toggle-off', colors.black)}
-          {menuItem('QR code', 'qr-code-scanner', colors.black)}
-          {menuItem('Saved', 'bookmark-border', colors.black)}
-          {menuItem('Close Friends', 'list', colors.black)}
-          {menuItem('Favorites', 'star-outline', colors.black)}
-          {menuItem(
-            'COVID-19 Information Center',
-            'volunteer-activism',
-            colors.black,
-          )}
+          <MenuOption disabled style={styles.create}>
+            <Text style={styles.createText}>Your account</Text>
+          </MenuOption>
+          {menuItem('Shopping activity', 'notifications-none', colors.black)}
+          <MenuOption disabled style={styles.create}>
+            <Text style={styles.createText}>Instagram Shop</Text>
+          </MenuOption>
+          <MenuOption style={styles.create}>
+            <Text style={styles.itemText}>Shops</Text>
+          </MenuOption>
+          <MenuOption style={styles.create}>
+            <Text style={styles.itemText}>Videos</Text>
+          </MenuOption>
+          <MenuOption style={styles.create}>
+            <Text style={styles.itemText}>Editors' picks</Text>
+          </MenuOption>
         </MenuOptions>
       </Menu>
     </View>

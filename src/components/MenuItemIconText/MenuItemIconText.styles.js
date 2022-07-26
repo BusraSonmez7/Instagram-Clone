@@ -8,12 +8,12 @@ export default StyleSheet.create({
   container: {
     alignItems: 'center',
     flexDirection: 'row',
-    marginBottom: 10,
-    marginTop: 10,
   },
   icon: {},
   text: {
+    flex: 1,
     marginStart: 10,
     fontSize: 16,
+    marginEnd: 10,
   },
 });

@@ -3,7 +3,7 @@ import {
   View,
   Text,
   Image,
-  TouchableWithoutFeedback,
+  TouchableOpacity,
   FlatList,
   ScrollView,
 } from 'react-native';
@@ -18,7 +18,7 @@ import Instagram from '../../../menu/Instagram/Instagram';
 import AddMenu from '../../../menu/MainPageAdd/MainPageAdd';
 import CircleComponent from '../../../components/CircleComponent/CircleComponent';
 
-export default function MainPage() {
+export default function MainPage({navigation}) {
   const [logo, setLogo] = useState(false);
 
   const FollowerStoryList = ({item}) => {
@@ -58,8 +58,16 @@ export default function MainPage() {
         <Instagram />
         <View style={styles.headerIcons}>
           <AddMenu />
-          <Icon name="favorite-border" size={30} style={styles.headerIcon} />
-          <Icon name="mail-outline" size={30} style={styles.headerIcon} />
+          <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
+            <Icon
+              name="notifications-none"
+              size={30}
+              style={styles.headerIcon}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Chats')}>
+            <Icon name="mail-outline" size={30} style={styles.headerIcon} />
+          </TouchableOpacity>
         </View>
       </View>
     );

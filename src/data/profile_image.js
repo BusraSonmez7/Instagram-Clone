@@ -4,12 +4,14 @@ const images = [
     watch: true,
     name: 'Zeynep',
     surname: 'Solak',
+    select: true,
   },
   {
     image: 'https://3denerji.com/wp-content/uploads/2019/02/person1-1.jpg',
     watch: true,
     name: 'Ali',
     surname: 'Yılmaz',
+    select: false,
   },
   {
     image: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',

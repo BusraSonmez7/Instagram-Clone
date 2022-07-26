@@ -39,7 +39,7 @@ export default function Chats() {
   const topFlatList = () => {
     return (
       <View>
-        <SearchView placeHolder={'Search'} />
+        <SearchView placeHolder={'Search'} endIcon={false} />
         <View style={styles.messagesContainer}>
           <Text style={styles.messagesText}>Messages</Text>
           <TouchableOpacity>
