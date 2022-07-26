@@ -9,7 +9,6 @@ export default StyleSheet.create({
   menuContainer: {
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    paddingBottom: 50,
   },
   icon: {
     color: colors.black,
@@ -18,9 +17,6 @@ export default StyleSheet.create({
   item: {
     alignItems: 'center',
     flexDirection: 'row',
-    marginTop: 10,
     marginStart: 10,
-    borderBottomWidth: 0.5,
-    borderColor: colors.circle_border,
   },
 });

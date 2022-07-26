@@ -18,9 +18,18 @@ export default StyleSheet.create({
   item: {
     alignItems: 'center',
     flexDirection: 'row',
-    marginTop: 10,
     marginStart: 10,
-    borderBottomWidth: 0.5,
-    borderColor: colors.circle_border,
+  },
+  create: {
+    alignItems: 'center',
+  },
+  createText: {
+    width: WIDTH,
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: colors.black,
+    borderBottomColor: colors.circle_border,
+    borderBottomWidth: 1,
+    textAlign: 'center',
   },
 });

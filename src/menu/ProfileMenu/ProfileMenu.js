@@ -8,7 +8,6 @@ import {colors} from '../../color';
 import {MenuProvider, renderers} from 'react-native-popup-menu';
 
 import MenuItemIconText from '../../components/MenuItemIconText/MenuItemIconText';
-import MenuList from '../../data/menuList';
 
 import {
   Menu,
@@ -25,7 +24,12 @@ export default function ProfileMenu() {
   const menuItem = (title, icon, color) => {
     return (
       <MenuOption style={styles.item}>
-        <MenuItemIconText title={title} icon={icon} color={color} />
+        <MenuItemIconText
+          title={title}
+          icon={icon}
+          color={color}
+          isBorder={false}
+        />
       </MenuOption>
     );
   };

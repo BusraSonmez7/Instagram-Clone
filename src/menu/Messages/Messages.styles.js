@@ -5,10 +5,28 @@ const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 
 export default StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+  container: {},
+  menuContainer: {
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    paddingTop: 20,
+  },
+  icon: {
+    color: colors.white,
+    marginStart: 15,
+  },
+  item: {
     alignItems: 'center',
-    padding: 10,
+    flexDirection: 'row',
+    marginTop: 10,
+    marginStart: 10,
+    borderBottomWidth: 0.5,
+    borderColor: colors.circle_border,
+  },
+  writeMessage: {
+    paddingStart: 10,
+    paddingEnd: 10,
+    borderBottomWidth: 0.5,
+    borderColor: colors.circle_border,
   },
 });

@@ -44,18 +44,26 @@ export default function ReelsMenu() {
           </View>
           <View>
             <MenuOption>
-              <MenuItemIconText
-                title={'Not Interested'}
-                icon={'eye-off-outline'}
-                color={colors.black}
-              />
+              <View style={styles.bottomContainer}>
+                <Icon2
+                  name={'eye-off-outline'}
+                  size={30}
+                  style={styles.menuIconFirst}
+                />
+                <Text style={styles.bottomText}>Not Interested</Text>
+              </View>
             </MenuOption>
             <MenuOption>
-              <MenuItemIconText
-                title={'Report...'}
-                icon={'comment-alert-outline'}
-                color={colors.red}
-              />
+              <View style={styles.bottomContainer}>
+                <Icon2
+                  name={'comment-alert-outline'}
+                  size={30}
+                  style={[styles.menuIconFirst, {color: colors.red}]}
+                />
+                <Text style={[styles.bottomText, {color: colors.red}]}>
+                  Report...
+                </Text>
+              </View>
             </MenuOption>
           </View>
         </MenuOptions>

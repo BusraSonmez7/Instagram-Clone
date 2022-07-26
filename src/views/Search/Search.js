@@ -9,7 +9,7 @@ export default function Search() {
   return (
     <View style={styles.container}>
       <ScrollView nestedScrollEnabled={true}>
-        <SearchView placeHolder={'Search'} />
+        <SearchView placeHolder={'Search'} endIcon={false} />
         <SearchComponent />
       </ScrollView>
     </View>

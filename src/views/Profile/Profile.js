@@ -16,8 +16,8 @@ import Story from '../../components/Story/Story';
 import NewPersonComponent from '../../components/NewPersonComponent/NewPersonComponent';
 import ProfileImage from '../../data/profile_image';
 import TopBarNavigator from '../../Navigators/ProfileMeterialTopTabs';
+import UserName from '../../menu/UserName/UserName';
 
-import UserNameHeader from '../../components/UserNameDropDown/UserNameDropDown';
 import ProfileAdd from '../../menu/ProfileAdd/ProfileAdd';
 import {colors} from '../../color';
 import ProfileMenu from '../../menu/ProfileMenu/ProfileMenu';
@@ -38,7 +38,7 @@ export default function Profile() {
       <View style={styles.headerContainer}>
         <View style={styles.userNameContainer}>
           <Icon name="lock-outline" size={16} style={styles.iconLock} />
-          <UserNameHeader />
+          <UserName />
         </View>
         <View style={styles.headerRightContainer}>
           <ProfileAdd />

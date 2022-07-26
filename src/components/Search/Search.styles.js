@@ -6,15 +6,17 @@ const HEIGHT = Dimensions.get('window').height;
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: colors.white,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    margin: 10,
+    backgroundColor: colors.border,
+    paddingStart: 10,
+    paddingEnd: 10,
+    borderRadius: 10,
+    alignItems: 'center',
   },
   searchContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    margin: 10,
-    backgroundColor: colors.border,
-    paddingStart: 10,
-    borderRadius: 10,
   },
 });
