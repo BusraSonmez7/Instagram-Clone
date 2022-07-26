@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, Text} from 'react-native';
 import styles from './MenuItemIconText.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {colors} from './../../color';
+
 export default function MenuItemIconText({title, icon, color, isBorder}) {
   const borderStyle = isBorder
     ? {

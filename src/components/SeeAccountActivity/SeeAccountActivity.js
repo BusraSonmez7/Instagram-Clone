@@ -1,20 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, Text, TouchableOpacity, Image} from 'react-native';
 import styles from './SeeAccountActivity.styles';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import {colors} from '../../color';
-import LinearGradient from 'react-native-linear-gradient';
 
-export default function SeeAccountActivity({title, icon, accountName}) {
-  const color = [
-    '#bc99ec',
-    '#f10b6b',
-    '#f15d0e',
-    '#ef09a8',
-    '#d509d3',
-    '#f2ad08',
-  ];
-
+export default function SeeAccountActivity({title, accountName}) {
   return (
     <TouchableOpacity>
       <View style={styles.container}>

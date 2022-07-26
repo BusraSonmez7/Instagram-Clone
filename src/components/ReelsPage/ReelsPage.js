@@ -2,13 +2,13 @@ import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, Image, Dimensions} from 'react-native';
 import styles from './ReelsPage.styles';
 import Video from 'react-native-video';
-import {Story} from '../Story';
 import LottieView from 'lottie-react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {MenuProvider} from 'react-native-popup-menu';
 
 import ReelsMenu from '../../menu/ReelsMenu/ReelsMenu';
-import {MenuProvider, renderers} from 'react-native-popup-menu';
-import Messages from '../../menu/Messages/Messages';
+import {Story} from '../Story';
+import {Messages} from '../../menu/Messages';
 
 const HEIGHT = Dimensions.get('window').height;
 

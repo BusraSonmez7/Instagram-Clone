@@ -1,1 +1,1 @@
-export {default as ReelsComponent} from './ReelsComponent';
+export {default as ReelsPage} from './ReelsPage';

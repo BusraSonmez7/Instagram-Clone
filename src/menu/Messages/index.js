@@ -1,1 +1,1 @@
-export {default as ProfileAdd} from './ProfileAdd';
+export {default as Messages} from './Messages';

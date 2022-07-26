@@ -3,7 +3,6 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 import {colors} from '../color';
 
 import MainPage from '../views/MainPage/MainPage/MainPage';
-
 import Chats from '../views/MainPage/ChatsPage/Chats';
 
 const Tab = createMaterialTopTabNavigator();

@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
-import {View, ScrollView, TextInput} from 'react-native';
+import React from 'react';
+import {View, ScrollView} from 'react-native';
 
 import styles from './Search.styles';
-import SearchComponent from '../../components/SearchPage/SearchPage';
+import {SearchPage} from '../../components/SearchPage';
 import SearchView from '../../components/Search/Search';
 
 export default function Search() {
@@ -10,7 +10,7 @@ export default function Search() {
     <View style={styles.container}>
       <ScrollView nestedScrollEnabled={true}>
         <SearchView placeHolder={'Search'} endIcon={false} />
-        <SearchComponent />
+        <SearchPage />
       </ScrollView>
     </View>
   );

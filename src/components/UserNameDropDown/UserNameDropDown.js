@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, Text} from 'react-native';
 import styles from './UserNameDropDown.styles';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
