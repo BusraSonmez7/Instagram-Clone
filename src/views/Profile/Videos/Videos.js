@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
-import {View, Image, Text, ScrollView} from 'react-native';
+import React from 'react';
+import {View, Image, ScrollView} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
 import styles from './Videos.styles';
 import ReelsData from '../../../data/sharing_list';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default function Videos() {
   return (

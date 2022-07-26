@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Image, TouchableOpacity} from 'react-native';
 import SearchData from '../../data/search_data';
 import styles from './SearchPage.styles';
+
 export default function SearchPage() {
   return (
     <View>

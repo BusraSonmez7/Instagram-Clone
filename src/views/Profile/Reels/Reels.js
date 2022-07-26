@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, Image, Text, ScrollView} from 'react-native';
 import styles from './Reels.styles';
 import ReelsData from '../../../data/sharing_list';

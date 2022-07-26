@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 import {View, Text} from 'react-native';
+import SwiperFlatList from 'react-native-swiper-flatlist';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import styles from './Reels.styles';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import ReelsComponent from '../../components/ReelsPage/ReelsPage';
-import SwiperFlatList from 'react-native-swiper-flatlist';
-
+import {ReelsPage} from '../../components/ReelsPage';
 import videoList from '../../data/video';
 
 export default function Reels() {
@@ -24,10 +23,12 @@ export default function Reels() {
       <SwiperFlatList
         data={videoList}
         renderItem={({item, index}) => (
-          <ReelsComponent currentIndex={currentIndex} index={index} />
+          <ReelsPage currentIndex={currentIndex} index={index} />
         )}
         onChangeIndex={indexValue}
-        keyExtractor={(item, index) => index}
+        keyExtractor={(item, index) => {
+          item + '_' + index;
+        }}
         vertical={true}
       />
     </View>

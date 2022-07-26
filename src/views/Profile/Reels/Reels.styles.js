@@ -2,10 +2,13 @@ import {StyleSheet, Dimensions} from 'react-native';
 import {colors} from '../../../color';
 
 const WIDTH = Dimensions.get('window').width;
-const HEIGHT = Dimensions.get('window').height;
 
 export default StyleSheet.create({
-  container: {flex: 1, marginTop: 2, backgroundColor: colors.white},
+  container: {
+    flex: 1,
+    marginTop: 2,
+    backgroundColor: colors.white,
+  },
   imageContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -24,6 +27,12 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  icon: {color: colors.white},
-  text: {color: colors.white, marginStart: 5, fontSize: 12},
+  icon: {
+    color: colors.white,
+  },
+  text: {
+    color: colors.white,
+    marginStart: 5,
+    fontSize: 12,
+  },
 });

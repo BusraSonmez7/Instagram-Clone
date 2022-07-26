@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, Image} from 'react-native';
+import React from 'react';
+import {View, Text, TouchableOpacity} from 'react-native';
 import styles from './IconAndActivity.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {colors} from '../../color';
+
 export default function IconAndActivity({title, icon, type}) {
   const circleStyle =
     type === 'notification' ? {borderColor: colors.black} : {};

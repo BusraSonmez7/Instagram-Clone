@@ -13,7 +13,6 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  image: {},
   borderGradient: {
     justifyContent: 'center',
     alignItems: 'center',

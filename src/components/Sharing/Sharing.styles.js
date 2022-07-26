@@ -33,9 +33,6 @@ export default StyleSheet.create({
   iconsContainerStart: {
     flexDirection: 'row',
   },
-  likeContainer: {
-    flexDirection: 'row',
-  },
   likeBold: {
     marginEnd: 20,
     marginStart: 20,

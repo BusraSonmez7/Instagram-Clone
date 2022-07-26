@@ -1,13 +1,11 @@
-import React, {useState} from 'react';
-import {View, Text, Dimensions} from 'react-native';
+import React from 'react';
+import {View, Text} from 'react-native';
 import styles from './ProfileAdd.styles';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 import {colors} from '../../color';
-
-import {MenuProvider, renderers} from 'react-native-popup-menu';
-
-import MenuItemIconText from '../../components/MenuItemIconText/MenuItemIconText';
+import {renderers} from 'react-native-popup-menu';
+import {MenuItemIconText} from '../../components/MenuItemIconText';
 
 import {
   Menu,
@@ -15,10 +13,6 @@ import {
   MenuOption,
   MenuTrigger,
 } from 'react-native-popup-menu';
-
-import CircleComponent from '../../components/CircleComponent/CircleComponent';
-
-const HEIGHT = Dimensions.get('window').height;
 
 export default function ProfileAdd() {
   const menuItem = (title, icon, color) => {

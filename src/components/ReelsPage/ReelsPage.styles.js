@@ -34,7 +34,6 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  profileImage: {},
   userName: {
     fontWeight: 'bold',
     color: colors.white,
@@ -98,10 +97,6 @@ export default StyleSheet.create({
   iconText: {
     color: colors.white,
     fontSize: 12,
-  },
-  volume: {
-    top: HEIGHT / 2.4,
-    left: WIDTH / 2.4,
   },
   backdrop: {
     backgroundColor: colors.black,

@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import {View, Text} from 'react-native';
+import React from 'react';
+import {View} from 'react-native';
 import styles from './MainPageAdd.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import {MenuProvider, renderers} from 'react-native-popup-menu';
+import {renderers} from 'react-native-popup-menu';
 
 import {
   Menu,
@@ -12,7 +12,7 @@ import {
   MenuTrigger,
 } from 'react-native-popup-menu';
 
-import MenuItem from '../../components/MenuItem/MenuItem';
+import {MenuItem} from '../../components/MenuItem';
 
 export default function MainPageAdd({image, name, watch}) {
   return (

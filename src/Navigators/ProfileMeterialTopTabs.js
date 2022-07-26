@@ -1,13 +1,12 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {colors} from '../color';
 
-import Reels from '../views/Profile/Reels/Reels';
-import Sharing from '../views/Profile/Sharing/Sharing';
-import Tags from '../views/Profile/Tags/Tags';
-import Videos from '../views/Profile/Videos/Videos';
+import {Reels} from '../views/Profile/Reels';
+import {Sharing} from '../views/Profile/Sharing';
+import {Tags} from '../views/Profile/Tags';
+import {Videos} from '../views/Profile/Videos';
 
 const Tab = createMaterialTopTabNavigator();
 

@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, Text} from 'react-native';
 import styles from './CircleComponent.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+
 export default function CircleComponent({title, icon}) {
   return (
     <View style={styles.container}>

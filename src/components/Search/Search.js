@@ -4,6 +4,7 @@ import styles from './Search.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 export default function Search({placeHolder, endIcon}) {
   const [searchText, setSearchText] = useState('Useless Text');
+
   return (
     <View style={styles.container}>
       <View style={styles.searchContainer}>

@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, Text} from 'react-native';
 import styles from './ChatComponent.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import Story from '../../components/Story/Story';
+import {Story} from '../../components/Story';
+
 export default function ChatComponent({image, name, watch}) {
   return (
     <View style={styles.container}>

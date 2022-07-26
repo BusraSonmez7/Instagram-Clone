@@ -1,9 +1,8 @@
 import React from 'react';
-import {View, Text, Image, FlatList} from 'react-native';
+import {View, Image, FlatList} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import styles from './ProfilePost.styles';
 import SharingData from '../../data/sharing_list';
-import {colors} from '../../color';
 
 export default function ProfilePost() {
   return (
@@ -29,7 +28,7 @@ export default function ProfilePost() {
           </View>
         )}
         numColumns={3}
-        keyExtractor={(item, index) => item + '' + index}
+        keyExtractor={(item, index) => item + '_' + index}
         style={styles.shareList}
         nestedScrollEnabled={true}
       />

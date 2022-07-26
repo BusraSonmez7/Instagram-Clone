@@ -1,16 +1,9 @@
 import React, {useState} from 'react';
-import {
-  View,
-  TextInput,
-  FlatList,
-  Dimensions,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
+import {View, TextInput, FlatList, Dimensions} from 'react-native';
 import styles from './Messages.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import {MenuProvider, renderers} from 'react-native-popup-menu';
+import {renderers} from 'react-native-popup-menu';
 
 import {
   Menu,
@@ -20,15 +13,12 @@ import {
 } from 'react-native-popup-menu';
 
 import ProfileImage from '../../data/profile_image';
-import PersonItem from '../../components/PersonItem/PersonItem';
-import Search from '../../components/Search/Search';
+import {PersonItem} from '../../components/PersonItem';
+import {Search} from '../../components/Search';
 
 const HEIGHT = Dimensions.get('window').height;
 
-const image_url =
-  'https://us.123rf.com/450wm/vadymvdrobot/vadymvdrobot1803/vadymvdrobot180303570/97983244-happy-asian-woman-in-t-shirt-bites-eyeglasses-and-looking-at-the-camera-over-grey-background.jpg?ver=6';
-
-export default function Messages({image, name, watch}) {
+export default function Messages() {
   const [searchText, setSearchText] = useState('Useless Text');
 
   return (
@@ -64,6 +54,9 @@ export default function Messages({image, name, watch}) {
                     type={'send'}
                   />
                 )}
+                keyExtractor={(item, index) => {
+                  item + '_' + index;
+                }}
               />
             </View>
           </MenuOption>

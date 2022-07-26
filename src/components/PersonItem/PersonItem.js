@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import styles from './PersonItem.styles';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import Story from '../../components/Story/Story';
+import {Story} from '../../components/Story';
+
 export default function PersonItem({
   image,
   name,

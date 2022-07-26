@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import styles from './AccountItem.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import Story from '../../components/Story/Story';
+import {Story} from '../../components/Story';
 import {colors} from '../../color';
 
 export default function AccountItem({image, name, select}) {

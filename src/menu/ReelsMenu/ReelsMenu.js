@@ -1,13 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, Text, Dimensions} from 'react-native';
 import styles from './ReelsMenu.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 import {colors} from '../../color';
 
-import {MenuProvider, renderers} from 'react-native-popup-menu';
-
-import MenuItemIconText from '../../components/MenuItemIconText/MenuItemIconText';
+import {renderers} from 'react-native-popup-menu';
 
 import {
   Menu,
