@@ -6,4 +6,7 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: colors.white,
   },
+  searchContainer: {
+    backgroundColor: colors.white,
+  },
 });

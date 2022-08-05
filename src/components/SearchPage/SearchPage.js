@@ -34,11 +34,9 @@ export default function SearchPage() {
             ) : null}
             {data.id === 1 ? (
               <View style={styles.list_six}>
-                {console.log(data.images)}
                 {data.images.slice(0, 6).map((img, imgIndex) => {
                   return (
                     <TouchableOpacity activeOpacity={0.9}>
-                      {console.log(img)}
                       <Image source={img} style={styles.image} />
                     </TouchableOpacity>
                   );
@@ -58,7 +56,6 @@ export default function SearchPage() {
                   {data.images.slice(0, 4).map((img, imgIndex) => {
                     return (
                       <TouchableOpacity activeOpacity={0.9}>
-                        {console.log(img)}
                         <Image source={img} style={styles.image} />
                       </TouchableOpacity>
                     );
@@ -68,11 +65,9 @@ export default function SearchPage() {
             ) : null}
             {data.id === 3 ? (
               <View style={styles.list_six}>
-                {console.log(data.images)}
                 {data.images.slice(0, 6).map((img, imgIndex) => {
                   return (
                     <TouchableOpacity activeOpacity={0.9}>
-                      {console.log(img)}
                       <Image source={img} style={styles.image} />
                     </TouchableOpacity>
                   );
