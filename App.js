@@ -13,6 +13,7 @@ import {colors} from './src/color';
 import {Chats} from './src/views/MainPage/ChatsPage';
 import {Notification} from './src/views/Notification';
 import {FollowProfile} from './src/views/FollowProfile';
+import {Comments} from './src/views/Comments';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -39,6 +40,11 @@ export default function App() {
         <Tab.Screen
           name="FollowProfile"
           component={FollowProfile}
+          options={{headerShown: false}}
+        />
+        <Tab.Screen
+          name="Comments"
+          component={Comments}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

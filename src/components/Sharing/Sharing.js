@@ -18,9 +18,7 @@ export default function Sharing({navigation}) {
             container_size={35}
             isBorder={false}
             isStory={false}
-            image={
-              'https://us.123rf.com/450wm/vadymvdrobot/vadymvdrobot1803/vadymvdrobot180303570/97983244-happy-asian-woman-in-t-shirt-bites-eyeglasses-and-looking-at-the-camera-over-grey-background.jpg?ver=6'
-            }
+            image={image_url}
           />
           <TouchableOpacity
             activeOpacity={1}
@@ -50,7 +48,9 @@ export default function Sharing({navigation}) {
       <Text numberOfLines={1} style={styles.userName}>
         kullanici_adi
       </Text>
-      <TouchableOpacity activeOpacity={1}>
+      <TouchableOpacity
+        activeOpacity={1}
+        onPress={() => navigation.navigate('Comments')}>
         <Text style={styles.commentButton}>78 yorumun tümünü gör</Text>
       </TouchableOpacity>
       <View style={styles.addComment}>

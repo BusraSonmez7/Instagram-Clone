@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, ScrollView, Animated} from 'react-native';
+import {View, ScrollView} from 'react-native';
 
 import styles from './Search.styles';
 import {SearchPage} from '../../components/SearchPage';
