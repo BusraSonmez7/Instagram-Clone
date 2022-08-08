@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  TouchableWithoutFeedback,
-  Dimensions,
-  Image,
-} from 'react-native';
+import {View, Text, TouchableOpacity, Dimensions, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {Story} from '../Story';
 import styles from './Sharing.styles';
@@ -15,7 +9,7 @@ const WIDTH = Dimensions.get('window').width;
 const image_url =
   'https://us.123rf.com/450wm/vadymvdrobot/vadymvdrobot1803/vadymvdrobot180303570/97983244-happy-asian-woman-in-t-shirt-bites-eyeglasses-and-looking-at-the-camera-over-grey-background.jpg?ver=6';
 
-export default function Sharing() {
+export default function Sharing({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
@@ -28,7 +22,11 @@ export default function Sharing() {
               'https://us.123rf.com/450wm/vadymvdrobot/vadymvdrobot1803/vadymvdrobot180303570/97983244-happy-asian-woman-in-t-shirt-bites-eyeglasses-and-looking-at-the-camera-over-grey-background.jpg?ver=6'
             }
           />
-          <Text style={styles.headerText}>kullanici adi</Text>
+          <TouchableOpacity
+            activeOpacity={1}
+            onPress={() => navigation.navigate('FollowProfile')}>
+            <Text style={styles.headerText}>user_name</Text>
+          </TouchableOpacity>
         </View>
         <Icon name={'more-vert'} size={25} style={styles.icon} />
       </View>
@@ -52,9 +50,9 @@ export default function Sharing() {
       <Text numberOfLines={1} style={styles.userName}>
         kullanici_adi
       </Text>
-      <TouchableWithoutFeedback>
+      <TouchableOpacity activeOpacity={1}>
         <Text style={styles.commentButton}>78 yorumun tümünü gör</Text>
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
       <View style={styles.addComment}>
         <Story
           isBorder={false}

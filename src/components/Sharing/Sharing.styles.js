@@ -18,6 +18,7 @@ export default StyleSheet.create({
   headerText: {
     marginStart: 10,
     color: colors.black,
+    fontWeight: 'bold',
   },
   icon: {
     color: colors.black,
