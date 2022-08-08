@@ -28,7 +28,7 @@ export default function MainPage({navigation}) {
           />
           <FlatList
             data={profile_image}
-            renderItem={() => <SharingList />}
+            renderItem={() => <SharingList navigation={navigation} />}
             showsHorizontalScrollIndicator={false}
             horizontal={false}
             style={{height: '100%', width: '100%'}}

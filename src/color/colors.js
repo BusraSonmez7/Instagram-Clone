@@ -12,6 +12,10 @@ const colors = {
   red: '#D60021',
   gray: '#7F7F7F',
   text_gray: '#B8B8B8',
+  switch_dark_blue: '#126FE8',
+  switch_ligh_blue: '#8BB8FF',
+  switch_dark_gray: '#CFCFCF',
+  switch_white: '#F7F6F2',
 };
 
 export default colors;
