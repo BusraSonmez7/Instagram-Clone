@@ -16,6 +16,7 @@ const colors = {
   switch_ligh_blue: '#8BB8FF',
   switch_dark_gray: '#CFCFCF',
   switch_white: '#F7F6F2',
+  disabled_blue: '#71B8F7',
 };
 
 export default colors;
