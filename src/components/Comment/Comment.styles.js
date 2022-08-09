@@ -6,6 +6,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: 10,
+    paddingEnd: 20,
     right: 0,
     justifyContent: 'space-between',
     borderBottomColor: colors.circle_border,
@@ -46,5 +47,16 @@ export default StyleSheet.create({
   likeIcon: {
     alignSelf: 'center',
     color: colors.gray,
+  },
+  seeCommentContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  line: {
+    width: 30,
+    height: 1,
+    backgroundColor: colors.circle_border,
+    marginEnd: 10,
   },
 });

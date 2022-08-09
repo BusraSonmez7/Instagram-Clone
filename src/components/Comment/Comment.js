@@ -4,7 +4,7 @@ import styles from './Comment.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {Story} from '../Story';
 
-export default function Comment({type}) {
+export default function Comment({type, isComment}) {
   const border = type === 'my' ? 1 : 0;
 
   const image_url =
@@ -30,7 +30,7 @@ export default function Comment({type}) {
             <Text style={styles.time}>1h</Text>
           </TouchableOpacity>
           {type === 'follow' ? (
-            <View style={styles.commentButtons}>
+            <View style={[styles.commentButtons, {marginTop: 0}]}>
               <TouchableOpacity>
                 <Text style={styles.like}>3 beğenme</Text>
               </TouchableOpacity>
@@ -43,9 +43,17 @@ export default function Comment({type}) {
             </View>
           ) : null}
         </View>
+        {isComment ? (
+          <View style={styles.seeCommentContainer}>
+            <View style={styles.line}></View>
+            <Text>3 yanıtı gör</Text>
+          </View>
+        ) : null}
       </View>
       {type === 'follow' ? (
-        <Icon name="favorite-border" size={17} style={styles.likeIcon} />
+        <TouchableOpacity activeOpacity={1}>
+          <Icon name="favorite-border" size={17} style={styles.likeIcon} />
+        </TouchableOpacity>
       ) : null}
     </View>
   );
