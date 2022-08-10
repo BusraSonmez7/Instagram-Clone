@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 export default function ActivityItem({icon, title, info}) {
   return (
     <View style={styles.container}>
-      <Icon name={icon} size={30} style={styles.icon} />
+      <Icon name={icon} size={25} style={styles.icon} />
       <View style={styles.itemContainer}>
         <Text style={styles.title}>{title}</Text>
         <Text>{info}</Text>
