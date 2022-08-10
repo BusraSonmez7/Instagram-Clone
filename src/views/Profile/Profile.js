@@ -10,7 +10,7 @@ import {ProfileDetail} from './components/ProfileDetail';
 import {NewPerson} from './components/NewPerson';
 import {FavoriteStory} from './components/FavoriteStory';
 
-export default function Profile() {
+export default function Profile({navigation}) {
   const menuProviderStyles = {
     backdrop: styles.backdrop,
   };
@@ -18,7 +18,7 @@ export default function Profile() {
   return (
     <MenuProvider customStyles={menuProviderStyles}>
       <View style={styles.container}>
-        <Header />
+        <Header navigation={navigation} />
         <ScrollView
           nestedScrollEnabled={true}
           showsVerticalScrollIndicator={false}>

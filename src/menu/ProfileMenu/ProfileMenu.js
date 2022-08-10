@@ -15,10 +15,25 @@ import {
   MenuTrigger,
 } from 'react-native-popup-menu';
 
-export default function ProfileMenu() {
+export default function ProfileMenu({navigation}) {
+  const selectItem = title => {
+    switch (title) {
+      case 'Settings':
+        navigation.navigate('Settings');
+        break;
+      case 'Your activity':
+        navigation.navigate('Activities');
+
+        break;
+      default:
+        alert('selam');
+        break;
+    }
+  };
+
   const menuItem = (title, icon, color) => {
     return (
-      <MenuOption style={styles.item}>
+      <MenuOption style={styles.item} onSelect={() => selectItem(title)}>
         <MenuItemIconText
           title={title}
           icon={icon}
