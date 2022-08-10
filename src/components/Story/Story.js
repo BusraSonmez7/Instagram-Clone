@@ -46,6 +46,10 @@ export default function Story(props) {
     );
   };
 
+  const followStory = () => {
+    props.navigation.navigate('FollowStory');
+  };
+
   return (
     <View
       style={[
@@ -66,7 +70,9 @@ export default function Story(props) {
         ]}>
         <TouchableOpacity
           activeOpacity={1}
-          onPress={() => null}
+          onPress={() => {
+            props.type === 'my' ? alert('follow story') : followStory();
+          }}
           style={[
             styles.buttonContainer,
             {

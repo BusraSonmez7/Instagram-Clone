@@ -79,7 +79,7 @@ export default function ReelsPage({currentIndex, index}) {
               style={styles.icon}
             />
             <Text style={styles.iconText}>XXX</Text>
-            <Messages />
+            <Messages type={'reel'} />
             <ReelsMenu />
             <Image
               source={{
