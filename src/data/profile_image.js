@@ -2,7 +2,7 @@ const images = [
   {
     image: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
     watch: true,
-    name: 'Zeynep',
+    name: 'NagihanAyse',
     surname: 'Solak',
     select: true,
   },

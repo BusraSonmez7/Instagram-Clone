@@ -6,8 +6,18 @@ export default StyleSheet.create({
     backgroundColor: colors.white,
     flex: 1,
   },
-
   story: {
-    height: 100,
+    height: 110,
+    paddingStart: 5,
+    borderBottomColor: colors.circle_border,
+    borderBottomWidth: 0.5,
+  },
+  myStoryContainer: {
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  storyName: {
+    color: colors.black,
+    fontSize: 11,
   },
 });

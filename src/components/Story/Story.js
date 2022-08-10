@@ -8,9 +8,12 @@ export default function Story(props) {
     ? props.container_size - props.container_size / 15
     : props.container_size;
 
-  const image_size = props.isBorder
-    ? props.container_size - props.container_size / 7.5
-    : props.container_size;
+  const gradiantSize =
+    props.type === 'my'
+      ? props.container_size - props.container_size / 7.5
+      : props.container_size;
+
+  const image_size = props.container_size - props.container_size / 7.5;
 
   const color = props.watch
     ? ['#bc99ec', '#f10b6b', '#f15d0e', '#ef09a8', '#d509d3', '#f2ad08']
@@ -30,7 +33,6 @@ export default function Story(props) {
             top: props.container_size - add_button,
           },
         ]}>
-        {console.log(add_button + 'dirrr')}
         <Text
           style={[
             styles.addText,
@@ -63,9 +65,9 @@ export default function Story(props) {
         style={[
           styles.borderGradient,
           {
-            width: props.container_size,
-            height: props.container_size,
-            borderRadius: props.container_size / 2,
+            width: gradiantSize,
+            height: gradiantSize,
+            borderRadius: gradiantSize / 2,
           },
         ]}>
         <TouchableOpacity
