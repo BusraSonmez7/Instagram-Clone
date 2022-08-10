@@ -3,6 +3,7 @@ import {View, Text, TouchableOpacity, Dimensions, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {Story} from '../Story';
 import styles from './Sharing.styles';
+import {Messages} from '../../menu/Messages';
 
 const WIDTH = Dimensions.get('window').width;
 
@@ -37,8 +38,12 @@ export default function Sharing({navigation}) {
       <View style={styles.iconsContainer}>
         <View style={styles.iconsContainerStart}>
           <Icon name={'favorite-border'} size={25} style={styles.icon} />
-          <Icon name={'chat-bubble-outline'} size={25} style={styles.icon} />
-          <Icon name={'send'} size={25} style={styles.icon} />
+          <TouchableOpacity
+            activeOpacity={1}
+            onPress={() => navigation.navigate('Comments')}>
+            <Icon name={'chat-bubble-outline'} size={25} style={styles.icon} />
+          </TouchableOpacity>
+          <Messages type={'message'} />
         </View>
         <Icon name={'bookmark-border'} size={25} style={styles.icon} />
       </View>

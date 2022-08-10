@@ -18,9 +18,11 @@ export default function MainPage({navigation}) {
           <FlatList
             style={styles.story}
             data={profile_image}
-            renderItem={item => <FollowerStoryList item={item.item} />}
+            renderItem={item => (
+              <FollowerStoryList item={item.item} navigation={navigation} />
+            )}
             horizontal
-            ListHeaderComponent={<MyStory />}
+            ListHeaderComponent={<MyStory navigation={navigation} />}
             showsHorizontalScrollIndicator={false}
             keyExtractor={(item, index) => {
               item + '_' + index;

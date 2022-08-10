@@ -15,10 +15,11 @@ import {
 import ProfileImage from '../../data/profile_image';
 import {PersonItem} from '../../components/PersonItem';
 import {Search} from '../../components/Search';
+import {colors} from '../../color';
 
 const HEIGHT = Dimensions.get('window').height;
 
-export default function Messages() {
+export default function Messages({type}) {
   const [searchText, setSearchText] = useState('Useless Text');
 
   return (
@@ -26,7 +27,14 @@ export default function Messages() {
       <Menu renderer={renderers.SlideInMenu}>
         <MenuTrigger>
           <View style={styles.headerTitle}>
-            <Icon name="send" size={HEIGHT / 30} style={styles.icon} />
+            <Icon
+              name="send"
+              size={HEIGHT / 30}
+              style={[
+                styles.icon,
+                {color: type === 'message' ? colors.black : colors.white},
+              ]}
+            />
           </View>
         </MenuTrigger>
         <MenuOptions optionsContainerStyle={styles.menuContainer}>

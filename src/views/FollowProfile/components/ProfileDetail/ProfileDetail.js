@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from './ProfileDetail.styles';
 
 export default function ProfileDetail() {
-  const isfollow = false;
+  const isfollow = true;
   return (
     <View>
       <Text style={styles.name}>Ad Soyad</Text>
