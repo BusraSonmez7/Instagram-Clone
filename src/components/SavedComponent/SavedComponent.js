@@ -23,23 +23,20 @@ export default function SavedComponent({title, listKey, style}) {
   };
   return (
     <View style={styles.container}>
-      <FlatList
-        data={productList.slice(0, 4)}
-        renderItem={({item, index}) => collection(item, index)}
-        keyExtractor={(item, index) => item + '_' + index}
-        listKey={listKey}
-        numColumns={2}
-        contentContainerStyle={[
-          style,
-          {
+      <View style={{borderRadius: 10, overflow: 'hidden'}}>
+        <FlatList
+          data={productList.slice(0, 4)}
+          renderItem={({item, index}) => collection(item, index)}
+          keyExtractor={(item, index) => item + '_' + index}
+          listKey={listKey}
+          style={{flexGrow: 1}}
+          numColumns={2}
+          contentContainerStyle={{
             borderRadius: 10,
             overflow: 'hidden',
-            borderWidth: 1,
-            borderColor: 'white',
-            padding: 1,
-          },
-        ]}
-      />
+          }}
+        />
+      </View>
 
       <View style={styles.titleContainer}>
         {title === 'Ses' ? (

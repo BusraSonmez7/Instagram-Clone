@@ -18,6 +18,8 @@ import {FollowStory} from './src/views/FollowStory';
 import {Settings} from './src/views/Settings';
 import {Activities} from './src/views/Activities';
 import {Saved} from './src/views/Saved';
+import {SavedList} from './src/views/SavedList';
+import {SavedMusicList} from './src/views/SavedMusicList';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -81,6 +83,16 @@ export default function App() {
         <Stack.Screen
           name="Saved"
           component={Saved}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="SavedList"
+          component={SavedList}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="SavedMusicList"
+          component={SavedMusicList}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

@@ -16,26 +16,16 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  titleContainer: {
-    flexDirection: 'row',
-    marginTop: 10,
-    alignItems: 'center',
-  },
-  icon: {
-    color: colors.black,
-  },
   title: {
     color: colors.black,
     fontWeight: 'bold',
     fontSize: 16,
     marginStart: 5,
+    marginTop: 10,
   },
   image: {
     width: WIDTH / 2 - 30,
     height: WIDTH / 2 - 30,
-    borderRadius: 10,
-  },
-  flatList: {
     borderRadius: 10,
   },
 });

@@ -6,6 +6,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,
+    backgroundColor: colors.white,
   },
   headerIcon: {
     color: colors.black,

@@ -15,23 +15,15 @@ export default StyleSheet.create({
   },
   image: {
     width: WIDTH / 3 - 1,
-    height: (WIDTH / 3) * 2,
+    height: WIDTH / 3 - 1,
+    backgroundColor: 'yellow',
     marginBottom: 1,
     marginEnd: 1,
   },
-  iconContainer: {
+  icon: {
+    color: colors.white,
     position: 'absolute',
     left: 10,
     bottom: 10,
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  icon: {
-    color: colors.white,
-  },
-  text: {
-    color: colors.white,
-    marginStart: 5,
-    fontSize: 12,
   },
 });
