@@ -23,7 +23,9 @@ export default function ProfileMenu({navigation}) {
         break;
       case 'Your activity':
         navigation.navigate('Activities');
-
+        break;
+      case 'Saved':
+        navigation.navigate('Saved');
         break;
       default:
         alert('selam');

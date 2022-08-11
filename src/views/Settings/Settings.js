@@ -33,7 +33,7 @@ export default function Settings() {
 
   return (
     <View style={styles.container}>
-      <Header />
+      <Header title={'Ayarlar'} />
       <ScrollView>
         <Search placeHolder={'Ara'} endIcon={false} />
         <FlatList
