@@ -22,31 +22,31 @@ export default function MainPage({navigation}) {
     <MenuProvider>
       <View style={styles.container}>
         <Header navigation={navigation} />
-        <ScrollView nestedScrollEnabled={true}>
-          <FlatList
-            style={styles.story}
-            data={profile_image}
-            renderItem={({item}) => (
-              <FollowerStoryList item={item} navigation={navigation} />
-            )}
-            horizontal
-            ListHeaderComponent={() => myStory()}
-            showsHorizontalScrollIndicator={false}
-            keyExtractor={(item, index) => {
-              item + '_' + index;
-            }}
-          />
-          <FlatList
-            data={profile_image}
-            renderItem={() => <SharingList navigation={navigation} />}
-            showsHorizontalScrollIndicator={false}
-            horizontal={false}
-            style={{height: '100%', width: '100%'}}
-            keyExtractor={(item, index) => {
-              item + '_' + index;
-            }}
-          />
-        </ScrollView>
+        <FlatList
+          data={profile_image}
+          renderItem={() => <SharingList navigation={navigation} />}
+          showsHorizontalScrollIndicator={false}
+          horizontal={false}
+          style={{height: '100%', width: '100%'}}
+          keyExtractor={(item, index) => {
+            item + '_' + index;
+          }}
+          ListHeaderComponent={() => (
+            <FlatList
+              style={styles.story}
+              data={profile_image}
+              renderItem={({item}) => (
+                <FollowerStoryList item={item} navigation={navigation} />
+              )}
+              horizontal
+              ListHeaderComponent={() => myStory()}
+              showsHorizontalScrollIndicator={false}
+              keyExtractor={(item, index) => {
+                item + '_' + index;
+              }}
+            />
+          )}
+        />
       </View>
     </MenuProvider>
   );

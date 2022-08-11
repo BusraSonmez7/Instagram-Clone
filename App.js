@@ -17,6 +17,7 @@ import {Comments} from './src/views/Comments';
 import {FollowStory} from './src/views/FollowStory';
 import {Settings} from './src/views/Settings';
 import {Activities} from './src/views/Activities';
+import {Saved} from './src/views/Saved';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -75,6 +76,11 @@ export default function App() {
         <Stack.Screen
           name="Activities"
           component={Activities}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Saved"
+          component={Saved}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

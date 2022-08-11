@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, ScrollView} from 'react-native';
+import {View, ScrollView, FlatList} from 'react-native';
 import {MenuProvider} from 'react-native-popup-menu';
 
 import TopBarNavigator from '../../Navigators/ProfileMeterialTopTabs';
@@ -19,19 +19,20 @@ export default function Profile({navigation}) {
     <MenuProvider customStyles={menuProviderStyles}>
       <View style={styles.container}>
         <Header navigation={navigation} />
-        <ScrollView
-          nestedScrollEnabled={true}
-          showsVerticalScrollIndicator={false}>
-          <View>
-            <ProfileImageRow />
-            <ProfileDetail />
-            <NewPerson />
-            <FavoriteStory />
-            <View style={styles.topNavigatorContainer}>
-              <TopBarNavigator />
+        <FlatList
+          data={[]}
+          ListHeaderComponent={() => (
+            <View>
+              <ProfileImageRow />
+              <ProfileDetail />
+              <NewPerson />
+              <FavoriteStory />
+              <View style={styles.topNavigatorContainer}>
+                <TopBarNavigator />
+              </View>
             </View>
-          </View>
-        </ScrollView>
+          )}
+        />
       </View>
     </MenuProvider>
   );
