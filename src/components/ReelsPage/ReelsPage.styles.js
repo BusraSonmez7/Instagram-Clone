@@ -82,9 +82,12 @@ export default StyleSheet.create({
     right: 10,
     justifyContent: 'space-evenly',
   },
+  iconTextContainer: {
+    alignItems: 'center',
+  },
   icon: {
     color: colors.white,
-    marginTop: 15,
+    marginBottom: 7,
   },
   image: {
     width: WIDTH / 8,
@@ -96,7 +99,8 @@ export default StyleSheet.create({
   },
   iconText: {
     color: colors.white,
-    fontSize: 12,
+    fontSize: 14,
+    fontWeight: 'bold',
   },
   backdrop: {
     backgroundColor: colors.black,

@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  View,
-  FlatList,
-  TouchableOpacity,
-  Image,
-  Text,
-  ScrollView,
-} from 'react-native';
-import {colors} from '../../color';
+import {View, FlatList, Text, ScrollView} from 'react-native';
 import activity_list from '../../data/activity_list';
 import styles from './Activities.styles';
 import {ActivityItem} from '../../components/ActivityItem';

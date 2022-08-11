@@ -17,7 +17,7 @@ export default function NewPerson() {
       <FlatList
         horizontal
         data={ProfileImage}
-        renderItem={item => <NewPersonComponent image={item.item.image} />}
+        renderItem={({item}) => <NewPersonComponent item={item} />}
         showsHorizontalScrollIndicator={false}
         style={styles.flatList}
         keyExtractor={(item, index) => {

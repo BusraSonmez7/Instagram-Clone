@@ -30,22 +30,22 @@ export default function App() {
           component={MainPageRouter}
           options={{headerShown: false}}
         />
-        <Tab.Screen
+        <Stack.Screen
           name="Notification"
           component={Notification}
           options={{headerShown: false}}
         />
-        <Tab.Screen
+        <Stack.Screen
           name="Chats"
           component={Chats}
           options={{headerShown: false}}
         />
-        <Tab.Screen
+        <Stack.Screen
           name="FollowProfile"
           component={FollowProfile}
           options={{headerShown: false}}
         />
-        <Tab.Screen
+        <Stack.Screen
           name="Comments"
           component={Comments}
           options={{headerShown: false}}
@@ -67,12 +67,12 @@ export default function App() {
           component={Profile}
           options={{headerShown: false}}
         />
-        <Tab.Screen
+        <Stack.Screen
           name="Settings"
           component={Settings}
           options={{headerShown: false}}
         />
-        <Tab.Screen
+        <Stack.Screen
           name="Activities"
           component={Activities}
           options={{headerShown: false}}

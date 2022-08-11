@@ -13,6 +13,7 @@ export default StyleSheet.create({
   contentNumber: {
     fontWeight: 'bold',
     color: colors.black,
+    fontSize: 16,
   },
   contentType: {
     color: colors.black,

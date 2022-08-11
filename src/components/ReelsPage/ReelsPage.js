@@ -50,14 +50,13 @@ export default function ReelsPage({currentIndex, index}) {
                   'https://us.123rf.com/450wm/vadymvdrobot/vadymvdrobot1803/vadymvdrobot180303570/97983244-happy-asian-woman-in-t-shirt-bites-eyeglasses-and-looking-at-the-camera-over-grey-background.jpg?ver=6'
                 }
               />
-              <Text style={styles.userName}>kullanici_adi</Text>
+              <Text style={styles.userName}>songul_yilmaz</Text>
               <TouchableOpacity activeOpacity={0.9} onPress={() => null}>
                 <Text style={styles.followButton}>Takip Et</Text>
               </TouchableOpacity>
             </View>
             <Text style={styles.comment}>
-              Comment Comment Comment Comment Comment Comment Comment Comment
-              Comment Comment
+              Kazananlar hiç hata yapmayanlar değil, asla vazgeçmeyenlerdir.
             </Text>
             <View style={styles.soundContainer}>
               <LottieView
@@ -65,20 +64,24 @@ export default function ReelsPage({currentIndex, index}) {
                 style={styles.soundAnimation}
                 autoPlay={true}
               />
-              <Text style={styles.musicName}>Music name</Text>
+              <Text style={styles.musicName}>teknofest</Text>
               <Icon name={'circle'} size={7} style={styles.soundCircle} />
-              <Text style={styles.soundType}>Sound type</Text>
+              <Text style={styles.soundType}>music</Text>
             </View>
           </View>
           <View style={styles.iconContainer}>
-            <Icon name="favorite" size={HEIGHT / 30} style={styles.icon} />
-            <Text style={styles.iconText}>Like</Text>
-            <Icon
-              name="chat-bubble-outline"
-              size={HEIGHT / 30}
-              style={styles.icon}
-            />
-            <Text style={styles.iconText}>XXX</Text>
+            <View style={styles.iconTextContainer}>
+              <Icon name="favorite" size={HEIGHT / 30} style={styles.icon} />
+              <Text style={styles.iconText}>20,6 bin</Text>
+            </View>
+            <View style={styles.iconTextContainer}>
+              <Icon
+                name="chat-bubble-outline"
+                size={HEIGHT / 30}
+                style={styles.icon}
+              />
+              <Text style={styles.iconText}>67</Text>
+            </View>
             <Messages type={'reel'} />
             <ReelsMenu />
             <Image
