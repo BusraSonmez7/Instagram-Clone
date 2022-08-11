@@ -26,9 +26,9 @@ export default function ProfileImageRow() {
         image={profileImg}
         watch={false}
       />
-      {profileContent('XX', 'Gönderi')}
-      {profileContent('XXX', 'Takipçi')}
-      {profileContent('XXX', 'Takip')}
+      {profileContent('45', 'Gönderi')}
+      {profileContent('381', 'Takipçi')}
+      {profileContent('353', 'Takip')}
     </View>
   );
 }

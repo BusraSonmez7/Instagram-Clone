@@ -7,7 +7,7 @@ import {ProfileAdd} from '../../../../menu/ProfileAdd';
 import {ProfileMenu} from '../../../../menu/ProfileMenu';
 import {UserName} from '../../../../menu/UserName';
 
-export default function Header() {
+export default function Header({navigation}) {
   return (
     <View style={styles.headerContainer}>
       <View style={styles.userNameContainer}>
@@ -16,7 +16,7 @@ export default function Header() {
       </View>
       <View style={styles.headerRightContainer}>
         <ProfileAdd />
-        <ProfileMenu />
+        <ProfileMenu navigation={navigation} />
       </View>
     </View>
   );

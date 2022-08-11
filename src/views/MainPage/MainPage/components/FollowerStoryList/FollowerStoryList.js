@@ -1,15 +1,24 @@
 import React from 'react';
+import {View, Text} from 'react-native';
+import styles from './FollowerStoryList.styles';
 import {Story} from '../../../../../components/Story';
 
 export default function FollowerStoryList({item, navigation}) {
+  const userName = (item.name + '' + item.surname).toLowerCase();
   return (
-    <Story
-      container_size={75}
-      isBorder={true}
-      isStory={true}
-      image={item.image}
-      watch={item.watch}
-      navigation={navigation}
-    />
+    <View style={styles.storyContainer}>
+      <Story
+        container_size={75}
+        isBorder={true}
+        isStory={true}
+        image={item.image}
+        watch={item.watch}
+        navigation={navigation}
+      />
+      <Text style={styles.storyName} numberOfLine={1}>
+        {userName.length < 15 ? userName : userName.substring(0, 12)}
+        {userName.length > 14 ? <Text>...</Text> : null}
+      </Text>
+    </View>
   );
 }

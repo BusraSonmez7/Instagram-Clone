@@ -15,6 +15,8 @@ import {Notification} from './src/views/Notification';
 import {FollowProfile} from './src/views/FollowProfile';
 import {Comments} from './src/views/Comments';
 import {FollowStory} from './src/views/FollowStory';
+import {Settings} from './src/views/Settings';
+import {Activities} from './src/views/Activities';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -28,22 +30,22 @@ export default function App() {
           component={MainPageRouter}
           options={{headerShown: false}}
         />
-        <Tab.Screen
+        <Stack.Screen
           name="Notification"
           component={Notification}
           options={{headerShown: false}}
         />
-        <Tab.Screen
+        <Stack.Screen
           name="Chats"
           component={Chats}
           options={{headerShown: false}}
         />
-        <Tab.Screen
+        <Stack.Screen
           name="FollowProfile"
           component={FollowProfile}
           options={{headerShown: false}}
         />
-        <Tab.Screen
+        <Stack.Screen
           name="Comments"
           component={Comments}
           options={{headerShown: false}}
@@ -51,6 +53,28 @@ export default function App() {
         <Tab.Screen
           name="FollowStory"
           component={FollowStory}
+          options={{headerShown: false}}
+        />
+      </Stack.Navigator>
+    );
+  };
+
+  const ProfileStack = () => {
+    return (
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Profile"
+          component={Profile}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Settings"
+          component={Settings}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Activities"
+          component={Activities}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
@@ -111,7 +135,7 @@ export default function App() {
         />
         <Tab.Screen
           name="Profile"
-          component={Profile}
+          component={ProfileStack}
           options={{headerShown: false}}
         />
       </Tab.Navigator>

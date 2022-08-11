@@ -24,7 +24,7 @@ export default function Sharing({navigation}) {
           <TouchableOpacity
             activeOpacity={1}
             onPress={() => navigation.navigate('FollowProfile')}>
-            <Text style={styles.headerText}>user_name</Text>
+            <Text style={styles.headerText}>songul_yilmaz</Text>
           </TouchableOpacity>
         </View>
         <Icon name={'more-vert'} size={25} style={styles.icon} />
@@ -51,7 +51,7 @@ export default function Sharing({navigation}) {
         yazilim ve diğerleri beğendi
       </Text>
       <Text numberOfLines={1} style={styles.userName}>
-        kullanici_adi
+        songul_yilmaz
       </Text>
       <TouchableOpacity
         activeOpacity={1}

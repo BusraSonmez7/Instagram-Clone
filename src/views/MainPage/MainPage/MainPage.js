@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, FlatList, ScrollView} from 'react-native';
+import {View, FlatList, ScrollView, Text} from 'react-native';
 import {MenuProvider} from 'react-native-popup-menu';
 
 import styles from './MainPage.styles';
@@ -10,6 +10,14 @@ import {MyStory} from './components/MyStory';
 import {SharingList} from './components/SharingList';
 
 export default function MainPage({navigation}) {
+  const myStory = () => {
+    return (
+      <View style={styles.myStoryContainer}>
+        <MyStory navigation={navigation} />
+        <Text style={styles.storyName}>Hikayen</Text>
+      </View>
+    );
+  };
   return (
     <MenuProvider>
       <View style={styles.container}>
@@ -18,11 +26,11 @@ export default function MainPage({navigation}) {
           <FlatList
             style={styles.story}
             data={profile_image}
-            renderItem={item => (
-              <FollowerStoryList item={item.item} navigation={navigation} />
+            renderItem={({item}) => (
+              <FollowerStoryList item={item} navigation={navigation} />
             )}
             horizontal
-            ListHeaderComponent={<MyStory navigation={navigation} />}
+            ListHeaderComponent={() => myStory()}
             showsHorizontalScrollIndicator={false}
             keyExtractor={(item, index) => {
               item + '_' + index;

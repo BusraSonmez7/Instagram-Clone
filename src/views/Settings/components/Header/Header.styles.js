@@ -2,20 +2,27 @@ import {StyleSheet} from 'react-native';
 import {colors} from '../../../../color';
 
 export default StyleSheet.create({
-  profileImageContainer: {
+  container: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 10,
+  },
+  header: {
+    flexDirection: 'row',
     alignItems: 'center',
   },
-  contentContainer: {
-    alignItems: 'center',
+  headerIcon: {
+    color: colors.black,
+    marginEnd: 10,
   },
-  contentNumber: {
+  headerText: {
+    fontSize: 22,
     fontWeight: 'bold',
     color: colors.black,
-    fontSize: 16,
+    marginStart: 10,
   },
-  contentType: {
+  sendIcon: {
     color: colors.black,
   },
 });
