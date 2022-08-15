@@ -58,4 +58,8 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     marginStart: 10,
   },
+  linearTextGradient: {
+    fontWeight: 'bold',
+    fontSize: 40,
+  },
 });

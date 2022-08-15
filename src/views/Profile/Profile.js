@@ -24,7 +24,7 @@ export default function Profile({navigation}) {
           showsVerticalScrollIndicator={false}>
           <View>
             <ProfileImageRow />
-            <ProfileDetail />
+            <ProfileDetail navigation={navigation} />
             <NewPerson />
             <FavoriteStory />
             <View style={styles.topNavigatorContainer}>
