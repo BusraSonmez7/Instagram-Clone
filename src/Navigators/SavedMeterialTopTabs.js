@@ -5,7 +5,6 @@ import {colors} from '../color';
 
 import {Reels} from '../views/SavedList/Reels';
 import {Sharing} from '../views/SavedList/Sharing';
-import {Search} from '../views/Search';
 
 const Tab = createMaterialTopTabNavigator();
 

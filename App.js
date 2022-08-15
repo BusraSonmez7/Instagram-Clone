@@ -65,7 +65,7 @@ export default function App() {
   const ProfileStack = () => {
     return (
       <Stack.Navigator>
-        <Stack.Screen
+        <Tab.Screen
           name="Profile"
           component={Profile}
           options={{headerShown: false}}

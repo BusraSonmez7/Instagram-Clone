@@ -16,7 +16,6 @@ export default StyleSheet.create({
   image: {
     width: WIDTH / 3 - 1,
     height: WIDTH / 3 - 1,
-    backgroundColor: 'yellow',
     marginBottom: 1,
     marginEnd: 1,
   },

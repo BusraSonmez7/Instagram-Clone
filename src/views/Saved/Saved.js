@@ -12,7 +12,13 @@ export default function Saved({navigation}) {
   const savedCollection = () => {
     return (
       <View style={styles.savedContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate('SavedList')}>
+        <TouchableOpacity
+          onPress={() =>
+            navigation.navigate('SavedList', {
+              isGuide: false,
+            })
+          }
+          activeOpacity={1}>
           <SavedComponent title={'Tüm Gönderiler'} listKey={'key123'} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('SavedMusicList')}>
@@ -27,7 +33,13 @@ export default function Saved({navigation}) {
       <FlatList
         data={productList}
         renderItem={({item}) => (
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate('SavedList', {
+                isGuide: true,
+              })
+            }
+            activeOpacity={1}>
             <Collection image={item} title={'New Collection'} />
           </TouchableOpacity>
         )}

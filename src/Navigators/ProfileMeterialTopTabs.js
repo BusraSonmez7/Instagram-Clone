@@ -15,7 +15,6 @@ function MyTabs() {
     <Tab.Navigator
       initialRouteName="Sharing"
       tabBarOptions={{
-        labelStyle: {fontSize: 12},
         style: {backgroundColor: colors.white},
       }}
       screenOptions={({route}) => ({
