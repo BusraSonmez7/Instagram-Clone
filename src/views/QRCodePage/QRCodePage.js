@@ -44,7 +44,7 @@ export default function QRCodePage() {
               enableLinearGradient={true}
             />
             <LinearTextGradient
-              style={{fontWeight: 'bold', fontSize: 40}}
+              style={styles.linearTextGradient}
               locations={[0, 1]}
               colors={['#f15d0e', '#d509d3']}
               start={{x: 0, y: 0}}

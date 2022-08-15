@@ -21,6 +21,7 @@ import {Saved} from './src/views/Saved';
 import {SavedList} from './src/views/SavedList';
 import {SavedMusicList} from './src/views/SavedMusicList';
 import {QRCodePage} from './src/views/QRCodePage';
+import {EditProfile} from './src/views/EditProfile';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -99,6 +100,11 @@ export default function App() {
         <Stack.Screen
           name="QRCodePage"
           component={QRCodePage}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="EditProfile"
+          component={EditProfile}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

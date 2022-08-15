@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import styles from './ProfileDetail.styles';
 
-export default function ProfileDetail() {
+export default function ProfileDetail({navigation}) {
   return (
     <View>
       <Text style={styles.name}>Büşra Sönmez</Text>
@@ -16,7 +16,9 @@ export default function ProfileDetail() {
         Bilgisayar Mühendisi {'\n\n'}"Sevgi akıldan üstündür.."
       </Text>
       <View style={styles.editProfileContainer}>
-        <TouchableOpacity style={styles.editProfileButton}>
+        <TouchableOpacity
+          style={styles.editProfileButton}
+          onPress={() => navigation.navigate('EditProfile')}>
           <Text style={styles.editText}>Profili Düzenle</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.editProfileIcon}>
