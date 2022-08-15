@@ -27,6 +27,9 @@ export default function ProfileMenu({navigation}) {
       case 'Saved':
         navigation.navigate('Saved');
         break;
+      case 'QR code':
+        navigation.navigate('QRCodePage');
+        break;
       default:
         alert('selam');
         break;
