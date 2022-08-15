@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {View, FlatList, ScrollView, TouchableOpacity} from 'react-native';
-('react-native-vector-icons/MaterialIcons');
 import productList from '../../data/product_image';
 
 import styles from './Saved.styles';
