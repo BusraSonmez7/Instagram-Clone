@@ -19,20 +19,19 @@ export default function Profile({navigation}) {
     <MenuProvider customStyles={menuProviderStyles}>
       <View style={styles.container}>
         <Header navigation={navigation} />
-        <FlatList
-          data={[]}
-          ListHeaderComponent={() => (
-            <View>
-              <ProfileImageRow />
-              <ProfileDetail />
-              <NewPerson />
-              <FavoriteStory />
-              <View style={styles.topNavigatorContainer}>
-                <TopBarNavigator />
-              </View>
+        <ScrollView
+          nestedScrollEnabled={true}
+          showsVerticalScrollIndicator={false}>
+          <View>
+            <ProfileImageRow />
+            <ProfileDetail />
+            <NewPerson />
+            <FavoriteStory />
+            <View style={styles.topNavigatorContainer}>
+              <TopBarNavigator />
             </View>
-          )}
-        />
+          </View>
+        </ScrollView>
       </View>
     </MenuProvider>
   );

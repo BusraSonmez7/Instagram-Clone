@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, FlatList} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from './FavoriteStory.styles';
 
@@ -28,10 +28,13 @@ export default function FavoriteStory() {
         </Text>
 
         <View style={styles.circleContainer}>
-          {circleAddView()}
-          {circleView()}
-          {circleView()}
-          {circleView()}
+          <FlatList
+            data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+            renderItem={() => circleView()}
+            horizontal
+            ListHeaderComponent={() => circleAddView()}
+            showsHorizontalScrollIndicator={false}
+          />
         </View>
       </View>
     );

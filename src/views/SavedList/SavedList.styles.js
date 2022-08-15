@@ -16,4 +16,29 @@ export default StyleSheet.create({
     backgroundColor: colors.black,
     opacity: 0.5,
   },
+  guideContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+    padding: 15,
+  },
+  collectionName: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: colors.black,
+  },
+  collectionSize: {
+    marginTop: 10,
+  },
+  createGuide: {
+    backgroundColor: colors.search,
+    padding: 15,
+    paddingBottom: 7,
+    paddingTop: 7,
+    borderRadius: 5,
+  },
+  createGuideText: {
+    color: colors.black,
+    fontWeight: 'bold',
+  },
 });
