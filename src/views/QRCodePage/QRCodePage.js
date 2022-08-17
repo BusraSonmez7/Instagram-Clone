@@ -9,7 +9,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 
-export default function QRCodePage() {
+export default function QRCodePage({navigation}) {
   return (
     // Within your render function
     <LinearGradient
@@ -53,7 +53,7 @@ export default function QRCodePage() {
             </LinearTextGradient>
           </View>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('QRScanner')}>
           <View style={styles.qrCodeScannerContainer}>
             <Icon
               name="photo-camera"
