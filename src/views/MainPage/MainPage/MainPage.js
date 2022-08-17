@@ -27,7 +27,6 @@ export default function MainPage({navigation}) {
           renderItem={() => <SharingList navigation={navigation} />}
           showsHorizontalScrollIndicator={false}
           horizontal={false}
-          style={{height: '100%', width: '100%'}}
           keyExtractor={(item, index) => {
             item + '_' + index;
           }}
