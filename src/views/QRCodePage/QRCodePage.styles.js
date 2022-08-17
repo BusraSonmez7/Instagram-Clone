@@ -60,6 +60,6 @@ export default StyleSheet.create({
   },
   linearTextGradient: {
     fontWeight: 'bold',
-    fontSize: 40,
+    fontSize: 30,
   },
 });

@@ -15,10 +15,6 @@ function MyTabs() {
         style: {backgroundColor: colors.white, height: 0},
       }}
       screenOptions={({route}) => ({
-        tabBarIndicatorStyle: {
-          backgroundColor: colors.black,
-          height: 0,
-        },
         tabBarShowLabel: false,
       })}>
       <Tab.Screen name="MainPage" component={MainPage} />
