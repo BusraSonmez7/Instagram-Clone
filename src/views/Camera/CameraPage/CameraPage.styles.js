@@ -1,14 +1,16 @@
 import {StyleSheet, Dimensions} from 'react-native';
-import {colors} from '../../../../color';
+import {colors} from '../../../color';
 
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 
 export default StyleSheet.create({
   container: {
-    height: HEIGHT,
+    flex: 1,
     position: 'absolute',
     justifyContent: 'space-between',
+    bottom: 75,
+    top: 0,
   },
   headerContainer: {
     width: WIDTH,
@@ -52,5 +54,37 @@ export default StyleSheet.create({
     backgroundColor: colors.white,
     borderWidth: 1,
     borderColor: colors.black,
+  },
+  bottomTextContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 10,
+    marginTop: 10,
+  },
+  carouselContainer: {
+    marginEnd: 15,
+    marginStart: 15,
+  },
+  image: {
+    width: 30,
+    height: 30,
+    borderColor: colors.white,
+    borderRadius: 5,
+    borderWidth: 3,
+    marginStart: 10,
+  },
+  cameraIcon: {
+    color: colors.white,
+    marginEnd: 10,
+  },
+  textContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
+  },
+  typeText: {
+    color: colors.white,
+    fontSize: 14,
+    fontWeight: 'bold',
   },
 });

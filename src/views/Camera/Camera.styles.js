@@ -6,10 +6,12 @@ const WIDTH = Dimensions.get('window').width;
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.white,
+    flexDirection: 'column',
+    backgroundColor: 'black',
   },
-  savedContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+  preview: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
   },
 });

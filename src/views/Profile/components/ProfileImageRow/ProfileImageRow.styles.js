@@ -4,8 +4,9 @@ import {colors} from '../../../../color';
 export default StyleSheet.create({
   profileImageContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     alignItems: 'center',
+    marginStart: 10,
   },
   contentContainer: {
     alignItems: 'center',
