@@ -4,6 +4,7 @@ import styles from './CameraPage.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Carousel from 'react-native-snap-carousel';
 import {Story} from './components/Story';
+import {Reels} from './components/Reels';
 
 export default function CameraPage() {
   const image_url =
@@ -24,7 +25,7 @@ export default function CameraPage() {
         <Icon name="close" size={35} style={styles.headerIcon} />
       </View>
       <View style={styles.bottomContainer}>
-        <Story />
+        <Reels />
         <View style={styles.photoContainer}>
           <View style={styles.circleContainer}>
             <View style={styles.circle}></View>

@@ -6,9 +6,10 @@ const HEIGHT = Dimensions.get('window').height;
 
 export default StyleSheet.create({
   leftText: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: 'bold',
     color: colors.white,
+    marginTop: 15,
   },
   leftIcon: {
     color: colors.white,
