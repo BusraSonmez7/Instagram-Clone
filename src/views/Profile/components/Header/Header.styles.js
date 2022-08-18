@@ -7,6 +7,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     padding: 10,
     justifyContent: 'space-between',
+    marginStart: 10,
   },
   userNameContainer: {
     flexDirection: 'row',
