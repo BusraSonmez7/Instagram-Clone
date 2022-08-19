@@ -9,7 +9,7 @@ export default function Story(props) {
     : props.container_size;
 
   const gradiantSize =
-    props.type === 'my'
+    props.type === 'my' && !props.isStory && !props.isBorder
       ? props.container_size - props.container_size / 7.5
       : props.container_size;
 

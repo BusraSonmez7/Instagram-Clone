@@ -8,9 +8,11 @@ export default StyleSheet.create({
     borderTopRightRadius: 20,
     paddingTop: 20,
   },
-  icon: {
-    color: colors.white,
-    marginStart: 15,
+  imageIcon: {
+    height: 25,
+    width: 25,
+    marginEnd: 10,
+    marginStart: 10,
   },
   writeMessage: {
     paddingStart: 10,
