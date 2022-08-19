@@ -9,7 +9,7 @@ export default StyleSheet.create({
     flex: 1,
     position: 'absolute',
     justifyContent: 'space-between',
-    bottom: 75,
+    bottom: 0,
     top: 0,
   },
   headerContainer: {
