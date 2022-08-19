@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import Carousel from 'react-native-snap-carousel';
 import {Story} from './components/Story';
 import {Reels} from './components/Reels';
+import {Live} from './components/Live';
 
 export default function CameraPage() {
   const image_url =
