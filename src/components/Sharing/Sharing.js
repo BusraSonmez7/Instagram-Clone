@@ -11,6 +11,13 @@ const image_url =
   'https://us.123rf.com/450wm/vadymvdrobot/vadymvdrobot1803/vadymvdrobot180303570/97983244-happy-asian-woman-in-t-shirt-bites-eyeglasses-and-looking-at-the-camera-over-grey-background.jpg?ver=6';
 
 export default function Sharing({navigation}) {
+  const normalText = title => {
+    return (
+      <Text numberOfLines={1} style={styles.likeAnd}>
+        {title}
+      </Text>
+    );
+  };
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
@@ -27,7 +34,7 @@ export default function Sharing({navigation}) {
             <Text style={styles.headerText}>songul_yilmaz</Text>
           </TouchableOpacity>
         </View>
-        <Icon name={'more-vert'} size={25} style={styles.icon} />
+        <Icon name={'more-vert'} size={20} style={styles.icon} />
       </View>
       <Image
         source={{
@@ -37,21 +44,30 @@ export default function Sharing({navigation}) {
       />
       <View style={styles.iconsContainer}>
         <View style={styles.iconsContainerStart}>
-          <Icon name={'favorite-border'} size={25} style={styles.icon} />
+          <Image
+            source={require('../../../assets/images/icons/like.png')}
+            style={styles.imageIcon}
+          />
           <TouchableOpacity
             activeOpacity={1}
             onPress={() => navigation.navigate('Comments')}>
-            <Icon name={'chat-bubble-outline'} size={25} style={styles.icon} />
+            <Image
+              source={require('../../../assets/images/icons/message.png')}
+              style={styles.imageIcon}
+            />
           </TouchableOpacity>
           <Messages type={'message'} />
         </View>
-        <Icon name={'bookmark-border'} size={25} style={styles.icon} />
+        <Icon name={'bookmark-border'} size={28} style={styles.icon} />
       </View>
       <Text numberOfLines={1} style={styles.likeBold}>
-        yazilim ve diğerleri beğendi
+        yazilim {normalText('ve')} diğerleri {normalText('beğendi')}
       </Text>
-      <Text numberOfLines={1} style={styles.userName}>
-        songul_yilmaz
+      <Text numberOfLines={2} style={styles.userName}>
+        songul_yilmaz{' '}
+        <Text style={styles.userComment}>
+          Uzaktan sevmediyseniz birini, hiç sevdim demeyin.
+        </Text>
       </Text>
       <TouchableOpacity
         activeOpacity={1}

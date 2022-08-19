@@ -8,7 +8,7 @@ export default function MyStory({navigation}) {
   return (
     <Story
       container_size={75}
-      isBorder={false}
+      isBorder={true}
       isStory={true}
       image={image}
       watch={false}

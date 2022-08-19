@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, Image} from 'react-native';
 import styles from './MainPageAdd.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -20,7 +20,10 @@ export default function MainPageAdd({image, name, watch}) {
       <Menu renderer={renderers.Popover}>
         <MenuTrigger>
           <View style={styles.headerTitle}>
-            <Icon name="add-circle-outline" size={30} style={styles.icon} />
+            <Image
+              source={require('../../../assets/images/icons/add.png')}
+              style={styles.imageIcon}
+            />
           </View>
         </MenuTrigger>
         <MenuOptions optionsContainerStyle={styles.menu}>

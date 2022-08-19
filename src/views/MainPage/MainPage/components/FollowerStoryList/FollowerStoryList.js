@@ -16,8 +16,8 @@ export default function FollowerStoryList({item, navigation}) {
         navigation={navigation}
       />
       <Text style={styles.storyName} numberOfLine={1}>
-        {userName.length < 15 ? userName : userName.substring(0, 12)}
-        {userName.length > 14 ? <Text>...</Text> : null}
+        {userName.length < 14 ? userName : userName.substring(0, 11)}
+        {userName.length > 13 ? <Text>...</Text> : null}
       </Text>
     </View>
   );

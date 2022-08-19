@@ -8,13 +8,13 @@ export default StyleSheet.create({
   },
   story: {
     height: 110,
-    paddingStart: 5,
     borderBottomColor: colors.circle_border,
     borderBottomWidth: 0.5,
   },
   myStoryContainer: {
     alignItems: 'center',
-    justifyContent: 'space-between',
+    paddingStart: 10,
+    paddingEnd: 5,
   },
   storyName: {
     color: colors.black,

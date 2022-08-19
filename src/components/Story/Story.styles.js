@@ -6,7 +6,6 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
-    margin: 5,
   },
   buttonContainer: {
     backgroundColor: colors.white,

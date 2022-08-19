@@ -9,9 +9,11 @@ export default StyleSheet.create({
     justifyContent: 'center',
     color: colors.black,
   },
-  icon: {
-    marginLeft: 20,
-    color: colors.black,
+  imageIcon: {
+    height: 25,
+    width: 25,
+    marginEnd: 10,
+    marginStart: 10,
   },
   menu: {
     borderRadius: 5,

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, TextInput, FlatList, Dimensions} from 'react-native';
+import {View, TextInput, FlatList, Dimensions, Image} from 'react-native';
 import styles from './Messages.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -27,13 +27,9 @@ export default function Messages({type}) {
       <Menu renderer={renderers.SlideInMenu}>
         <MenuTrigger>
           <View style={styles.headerTitle}>
-            <Icon
-              name="send"
-              size={HEIGHT / 30}
-              style={[
-                styles.icon,
-                {color: type === 'message' ? colors.black : colors.white},
-              ]}
+            <Image
+              source={require('../../../assets/images/icons/send.png')}
+              style={styles.imageIcon}
             />
           </View>
         </MenuTrigger>

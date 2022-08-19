@@ -6,15 +6,15 @@ export default StyleSheet.create({
     flexDirection: 'row',
     padding: 10,
     justifyContent: 'space-between',
-    borderBottomColor: colors.border,
-    borderBottomWidth: 1,
   },
   headerIcons: {
     flexDirection: 'row',
     alignItems: 'center',
   },
-  headerIcon: {
-    marginLeft: 10,
-    color: colors.black,
+  imageIcon: {
+    height: 25,
+    width: 25,
+    marginEnd: 10,
+    marginStart: 10,
   },
 });
