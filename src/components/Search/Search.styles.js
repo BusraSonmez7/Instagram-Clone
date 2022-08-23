@@ -7,6 +7,8 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     margin: 10,
+    marginStart: 15,
+    marginEnd: 15,
     backgroundColor: colors.search,
     paddingStart: 10,
     paddingEnd: 10,

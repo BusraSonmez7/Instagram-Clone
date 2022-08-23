@@ -34,7 +34,7 @@ export default StyleSheet.create({
     color: colors.black,
   },
   imageMenu: {
-    width: 25,
-    height: 28,
+    width: 22,
+    height: 25,
   },
 });

@@ -11,5 +11,6 @@ export default StyleSheet.create({
     fontSize: 11,
     width: 75,
     textAlign: 'center',
+    marginTop: 5,
   },
 });

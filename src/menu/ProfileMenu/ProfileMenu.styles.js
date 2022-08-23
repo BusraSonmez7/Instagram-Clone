@@ -16,4 +16,9 @@ export default StyleSheet.create({
     flexDirection: 'row',
     marginStart: 10,
   },
+  imageIcon: {
+    height: 25,
+    width: 22,
+    marginStart: 10,
+  },
 });

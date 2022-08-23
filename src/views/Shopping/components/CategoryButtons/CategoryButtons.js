@@ -17,8 +17,8 @@ export default function CategoryButtons() {
               style={[
                 styles.categoryButtonContainer,
                 {
-                  marginEnd: index === 4 ? 10 : 5,
-                  marginStart: index === 0 ? 10 : 0,
+                  marginEnd: index === 4 ? 15 : 5,
+                  marginStart: index === 0 ? 15 : 0,
                 },
               ]}>
               <Text style={styles.categoryButtonText}>{data}</Text>

@@ -31,4 +31,10 @@ export default StyleSheet.create({
     borderBottomWidth: 1,
     textAlign: 'center',
   },
+  imageIcon: {
+    height: 25,
+    width: 25,
+    marginEnd: 10,
+    marginStart: 10,
+  },
 });

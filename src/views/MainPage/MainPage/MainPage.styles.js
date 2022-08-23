@@ -13,11 +13,12 @@ export default StyleSheet.create({
   },
   myStoryContainer: {
     alignItems: 'center',
-    paddingStart: 10,
+    paddingStart: 15,
     paddingEnd: 5,
   },
   storyName: {
     color: colors.black,
     fontSize: 11,
+    marginTop: 5,
   },
 });

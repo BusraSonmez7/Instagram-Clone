@@ -5,6 +5,8 @@ export default StyleSheet.create({
   header: {
     flexDirection: 'row',
     padding: 10,
+    paddingStart: 15,
+    paddingEnd: 15,
     justifyContent: 'space-between',
   },
   headerIcons: {
@@ -14,7 +16,6 @@ export default StyleSheet.create({
   imageIcon: {
     height: 25,
     width: 25,
-    marginEnd: 10,
-    marginStart: 10,
+    marginStart: 20,
   },
 });

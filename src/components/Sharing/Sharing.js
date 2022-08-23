@@ -40,7 +40,7 @@ export default function Sharing({navigation}) {
         source={{
           uri: image_url,
         }}
-        style={[styles.image, {height: 300, width: WIDTH}]}
+        style={[styles.image, {height: 400, width: WIDTH}]}
       />
       <View style={styles.iconsContainer}>
         <View style={styles.iconsContainerStart}>

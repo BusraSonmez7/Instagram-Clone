@@ -12,7 +12,6 @@ export default StyleSheet.create({
   imageIcon: {
     height: 25,
     width: 25,
-    marginEnd: 10,
     marginStart: 10,
   },
   menu: {

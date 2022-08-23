@@ -11,7 +11,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginStart: 10,
+    marginStart: 15,
     paddingBottom: 5,
     paddingTop: 5,
   },
@@ -26,8 +26,7 @@ export default StyleSheet.create({
   },
   icon: {
     color: colors.black,
-    marginEnd: 10,
-    marginStart: 10,
+    marginEnd: 15,
   },
   image: {},
   iconsContainer: {
@@ -41,8 +40,8 @@ export default StyleSheet.create({
     flexDirection: 'row',
   },
   likeBold: {
-    marginEnd: 10,
-    marginStart: 10,
+    marginEnd: 15,
+    marginStart: 15,
     color: colors.black,
     fontWeight: 'bold',
   },
@@ -51,8 +50,8 @@ export default StyleSheet.create({
     fontWeight: 'normal',
   },
   userName: {
-    marginEnd: 10,
-    marginStart: 10,
+    marginEnd: 15,
+    marginStart: 15,
     color: colors.black,
     fontWeight: 'bold',
   },
@@ -62,18 +61,21 @@ export default StyleSheet.create({
   },
   commentButton: {
     padding: 5,
-    paddingStart: 10,
+    paddingStart: 15,
+    paddingEnd: 15,
   },
   addComment: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingStart: 9,
+    paddingStart: 15,
+    paddingEnd: 15,
   },
   commentText: {
     marginStart: 10,
   },
   dateText: {
-    paddingStart: 10,
+    paddingStart: 15,
+    paddingEnd: 15,
     paddingTop: 2,
     fontSize: 12,
   },
@@ -81,6 +83,6 @@ export default StyleSheet.create({
     height: 25,
     width: 25,
     marginEnd: 10,
-    marginStart: 10,
+    marginStart: 15,
   },
 });
