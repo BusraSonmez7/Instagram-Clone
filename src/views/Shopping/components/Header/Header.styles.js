@@ -19,4 +19,9 @@ export default StyleSheet.create({
     color: colors.black,
     marginStart: 20,
   },
+  imageMenu: {
+    width: 25,
+    height: 28,
+    marginEnd: 20,
+  },
 });

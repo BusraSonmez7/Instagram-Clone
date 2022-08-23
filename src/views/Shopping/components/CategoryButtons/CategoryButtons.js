@@ -13,7 +13,14 @@ export default function CategoryButtons() {
         style={styles.categoryScroll}>
         {ShopCategory.map((data, index) => {
           return (
-            <TouchableOpacity style={styles.categoryButtonContainer}>
+            <TouchableOpacity
+              style={[
+                styles.categoryButtonContainer,
+                {
+                  marginEnd: index === 4 ? 10 : 5,
+                  marginStart: index === 0 ? 10 : 0,
+                },
+              ]}>
               <Text style={styles.categoryButtonText}>{data}</Text>
             </TouchableOpacity>
           );

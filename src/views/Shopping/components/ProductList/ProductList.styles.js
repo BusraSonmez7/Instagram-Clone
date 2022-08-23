@@ -4,6 +4,7 @@ const WIDTH = Dimensions.get('window').width;
 
 export default StyleSheet.create({
   productListContainer: {
+    flex: 1,
     marginTop: 10,
   },
   productImage: {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import styles from './ShoppingMenu.styles';
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -32,7 +32,10 @@ export default function ShoppingMenu() {
     <View style={styles.container}>
       <Menu renderer={renderers.SlideInMenu}>
         <MenuTrigger>
-          <Icon2 name="menu" size={30} style={styles.icon} />
+          <Image
+            source={require('../../../assets/images/icons/menu.png')}
+            style={styles.imageMenu}
+          />
         </MenuTrigger>
         <MenuOptions optionsContainerStyle={styles.menuContainer}>
           <MenuOption disabled style={styles.create}>

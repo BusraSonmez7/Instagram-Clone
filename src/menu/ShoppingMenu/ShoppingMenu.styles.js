@@ -33,4 +33,8 @@ export default StyleSheet.create({
     fontSize: 16,
     color: colors.black,
   },
+  imageMenu: {
+    width: 25,
+    height: 28,
+  },
 });

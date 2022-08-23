@@ -16,5 +16,16 @@ export default StyleSheet.create({
   searchContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+    flex: 1,
+  },
+  iconSearch: {
+    color: colors.black,
+  },
+  inputText: {
+    fontSize: 17,
+    marginStart: 10,
+    fontWeight: '500',
+    padding: 0,
+    flex: 1,
   },
 });

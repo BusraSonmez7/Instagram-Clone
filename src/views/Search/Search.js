@@ -13,7 +13,7 @@ export default function Search() {
         stickyHeaderIndices={[0]}
         stickyHeaderHiddenOnScroll={true}>
         <View style={styles.searchContainer}>
-          <SearchView placeHolder={'Search'} endIcon={false} />
+          <SearchView placeHolder={'Ara'} endIcon={false} />
         </View>
         <SearchPage />
       </ScrollView>

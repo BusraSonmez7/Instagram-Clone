@@ -17,8 +17,9 @@ const colors = {
   switch_dark_gray: '#CFCFCF',
   switch_white: '#F7F6F2',
   disabled_blue: '#71B8F7',
-  search: '#EBEBEB',
+  search: '#EFEFEF',
   dark_gray: '#4D4D4D',
+  search_text: '#838383',
 };
 
 export default colors;
