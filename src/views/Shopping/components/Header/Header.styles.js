@@ -6,6 +6,9 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: 10,
+    paddingStart: 15,
+    paddingEnd: 15,
+    alignItems: 'center',
   },
   headerText: {
     fontSize: 25,
@@ -20,8 +23,8 @@ export default StyleSheet.create({
     marginStart: 20,
   },
   imageMenu: {
-    width: 25,
-    height: 28,
-    marginEnd: 20,
+    width: 22,
+    height: 25,
+    marginEnd: 15,
   },
 });

@@ -6,7 +6,7 @@ import styles from './ProfileDetail.styles';
 
 export default function ProfileDetail({navigation}) {
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.name}>Büşra Sönmez</Text>
       <TouchableOpacity style={styles.setStatusContainer}>
         <Icon name="plus" size={16} style={styles.iconStatus} />

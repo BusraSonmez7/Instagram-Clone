@@ -6,8 +6,9 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,
+    paddingStart: 15,
+    paddingEnd: 15,
     justifyContent: 'space-between',
-    marginStart: 10,
   },
   userNameContainer: {
     flexDirection: 'row',
@@ -19,5 +20,10 @@ export default StyleSheet.create({
   },
   headerRightContainer: {
     flexDirection: 'row',
+  },
+  imageIcon: {
+    height: 18,
+    width: 15,
+    marginEnd: 5,
   },
 });

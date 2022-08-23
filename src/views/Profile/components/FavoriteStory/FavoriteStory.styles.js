@@ -8,7 +8,8 @@ export default StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     margin: 10,
-    marginStart: 20,
+    marginStart: 15,
+    marginEnd: 15,
   },
   favoriteStoryText: {
     fontWeight: 'bold',
@@ -18,7 +19,7 @@ export default StyleSheet.create({
     color: colors.black,
   },
   favoriteStoryDownText: {
-    marginStart: 20,
+    marginStart: 15,
     color: colors.black,
     marginBottom: 10,
   },
@@ -26,13 +27,15 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     padding: 10,
+    paddingStart: 15,
+    paddingEnd: 0,
   },
   circle: {
     width: 80,
     height: 80,
     borderRadius: 40,
     backgroundColor: colors.border,
-    marginEnd: 10,
+    marginEnd: 15,
   },
   circleAdd: {
     width: 80,
@@ -53,5 +56,6 @@ export default StyleSheet.create({
   },
   addHistoryNewText: {
     color: colors.black,
+    marginEnd: 10,
   },
 });

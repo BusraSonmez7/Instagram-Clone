@@ -6,7 +6,8 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginStart: 10,
+    marginStart: 15,
+    marginEnd: 15,
   },
   contentContainer: {
     alignItems: 'center',

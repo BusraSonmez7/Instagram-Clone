@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import styles from './ProfileAdd.styles';
 
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -31,7 +31,10 @@ export default function ProfileAdd() {
     <View style={styles.container}>
       <Menu renderer={renderers.SlideInMenu}>
         <MenuTrigger>
-          <Icon2 name="plus-circle-outline" size={30} style={styles.icon} />
+          <Image
+            source={require('../../../assets/images/icons/add.png')}
+            style={styles.imageIcon}
+          />
         </MenuTrigger>
         <MenuOptions optionsContainerStyle={styles.menuContainer}>
           <MenuOption disabled style={styles.create}>

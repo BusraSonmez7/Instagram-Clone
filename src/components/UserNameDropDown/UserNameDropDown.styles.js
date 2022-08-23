@@ -13,9 +13,13 @@ export default StyleSheet.create({
   },
   iconArrowDown: {
     color: colors.black,
-    marginStart: 5,
   },
   iconCircle: {
     color: colors.pink,
+  },
+  imageIcon: {
+    height: 12,
+    width: 12,
+    marginStart: 5,
   },
 });

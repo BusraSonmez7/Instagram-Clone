@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, Image} from 'react-native';
 import styles from './ProfileMenu.styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {colors} from '../../color';
@@ -52,7 +52,10 @@ export default function ProfileMenu({navigation}) {
     <View style={styles.container}>
       <Menu renderer={renderers.SlideInMenu}>
         <MenuTrigger>
-          <Icon name="menu" size={30} style={styles.icon} />
+          <Image
+            source={require('../../../assets/images/icons/menu.png')}
+            style={styles.imageIcon}
+          />
         </MenuTrigger>
         <MenuOptions optionsContainerStyle={styles.menuContainer}>
           {menuItem('Settings', 'settings', colors.black)}

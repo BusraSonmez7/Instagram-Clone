@@ -21,7 +21,7 @@ export default function ProfileImageRow() {
     <View style={styles.profileImageContainer}>
       <Story
         container_size={90}
-        isBorder={false}
+        isBorder={true}
         isStory={false}
         image={profileImg}
         watch={false}

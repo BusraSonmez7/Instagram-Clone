@@ -2,11 +2,14 @@ import {StyleSheet} from 'react-native';
 import {colors} from '../../../../color';
 
 export default StyleSheet.create({
+  container: {
+    paddingStart: 15,
+    paddingEnd: 15,
+  },
   name: {
     color: colors.black,
     fontWeight: 'bold',
     fontSize: 16,
-    marginStart: 20,
     marginBottom: 10,
   },
   setStatusContainer: {
@@ -15,7 +18,6 @@ export default StyleSheet.create({
     alignItems: 'center',
     backgroundColor: colors.set_status,
     borderRadius: 15,
-    marginStart: 20,
     padding: 7,
     justifyContent: 'center',
   },
@@ -28,7 +30,6 @@ export default StyleSheet.create({
   },
   explanation: {
     color: colors.black,
-    marginStart: 20,
     marginTop: 10,
   },
   editProfileContainer: {
@@ -42,7 +43,6 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 7,
-    marginStart: 20,
     marginEnd: 10,
     borderRadius: 7,
   },
@@ -51,7 +51,6 @@ export default StyleSheet.create({
     height: 35,
     justifyContent: 'center',
     alignItems: 'center',
-    marginEnd: 10,
     backgroundColor: colors.edit_profile,
     borderRadius: 7,
   },

@@ -6,7 +6,8 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     margin: 20,
-    marginEnd: 10,
+    marginStart: 15,
+    marginEnd: 15,
   },
   newPersonText: {
     fontWeight: 'bold',
@@ -18,5 +19,6 @@ export default StyleSheet.create({
   },
   flatList: {
     marginStart: 10,
+    marginEnd: 15,
   },
 });

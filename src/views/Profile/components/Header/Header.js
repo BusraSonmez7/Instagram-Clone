@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import styles from './Header.styles';
@@ -11,7 +11,10 @@ export default function Header({navigation}) {
   return (
     <View style={styles.headerContainer}>
       <View style={styles.userNameContainer}>
-        <Icon name="lock-outline" size={16} style={styles.iconLock} />
+        <Image
+          source={require('../../../../../assets/images/icons/lock.png')}
+          style={styles.imageIcon}
+        />
         <UserName />
       </View>
       <View style={styles.headerRightContainer}>
